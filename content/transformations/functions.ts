@@ -4,25 +4,22 @@
 // =============================================================================
 
 
-import {isPalindrome, words, flatten} from '@mathigon/core';
+import {flatten, isPalindrome, words} from '@mathigon/core';
 import {Line, Point} from '@mathigon/fermat';
-import {Draggable, $N, InputView, ElementView} from '@mathigon/boost';
+import {$N, Draggable, ElementView, InputView} from '@mathigon/boost';
 import {Geopad, GeoPoint, PlayBtn, Slider, Step} from '../shared/types';
 import {Wallpaper} from './components/wallpaper';
 
 import './components/wallpaper';
 
 
-
 function play($step: Step, $el: ElementView, duration: number, score: string,
-              callback: () => void) {
+    callback: () => void) {
   const $play = $el.$('x-play-btn') as PlayBtn;
   $play.on('play', () => {
     callback();
-    setTimeout(() => {
-      $step.score(score);
-      $play.reset();
-    }, duration);
+    setTimeout(() => $step.score(score), duration);
+    setTimeout(() => $play.reset(), duration + 2000);
   });
 }
 
@@ -33,7 +30,7 @@ function expandSegment($geopad: Geopad, [e1, e2]: GeoPoint[], line: Line) {
 }
 
 function drawShape($step: Step, $geopad: Geopad, goal: string, shape: string,
-                   expand = false) {
+    expand = false) {
   // `shape` should be names of a polygon, segment or line.
   const lines = flatten(
       words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));
@@ -109,7 +106,7 @@ export function rigid1($step: Step) {
 
   play($step, $animations[2], 2000, 't3', () => {
     $images[2].css('transform', 'none');
-    for (let i = 2; i < 6; ++i) $lines[i].enter('draw', 500);
+    for (let i = 2; i < 7; ++i) $lines[i].enter('draw', 500);
     $images[2].animate({transform: 'rotate(84deg)'}, 1000, 1000);
   });
 }
@@ -317,6 +314,11 @@ export function footsteps($step: Step) {
   });
 }
 
+export function wallpaperGroups3($step: Step) {
+  const $gallery = $step.$('x-gallery')!;
+  $gallery.on('slide-end', () => $step.score('gallery'));
+}
+
 export function drawing($step: Step) {
   const $wallpaper = $step.$('x-wallpaper') as Wallpaper;
   let switched = false;
@@ -328,6 +330,7 @@ export function drawing($step: Step) {
   $wallpaper.on('switch', () => {
     switched = true;
     setTimeout(() => $step.score('switch'), 500);
+    // TODO Maybe scroll the galary above to the correct position?
   });
 }
 

@@ -7,11 +7,11 @@
 
 Many professions that use mathematics are interested in one specific aspect –
 _finding patterns_, and being able to predict the future. Here are a few
-examples:
+examples: 
 
 ::: column(width=160 parent="padded-thin")
 
-    x-media(src="images/crime.jpg" width=160 height=160)
+    x-img(src="images/crime.jpg" width=160 height=160 alt="Police Officers")
 
 ::: column(width=400)
 
@@ -23,22 +23,22 @@ rate in parts of Los Angeles by 12%!
 
 ::: column(width=160)
 
-    x-media(src="images/volcanoes.jpg" width=160 height=160)
+    x-img(src="images/volcanoes.jpg" width=160 height=160 alt="Volcano")
 
 ::: column(width=400)
 
 It turns out that __earthquakes__ follow similar patterns to crimes. Just like
 one crime might trigger retaliations, an earthquake might trigger aftershocks.
-In mathematics, this is called a “self-exciting processes”, and there are
+In mathematics, this is called a “self-exciting process”, and there are
 equations that help predict when the next one might happen.
 
 ::: column(width=160)
 
-    x-media(src="images/finance.jpg" width=160 height=160)
+    x-img(src="images/finance.jpg" width=160 height=160 alt="Stock Market Charts")
 
 ::: column(width=400)
 
-Bankers also look at historic data of stock prices, interest rates and currency
+Bankers also look at historical data of stock prices, interest rates and currency
 exchange rates to estimate how __financial markets__ might change in the
 future. Being able to predict if the value of a stock will go up or down can be
 extremely lucrative!
@@ -60,28 +60,28 @@ sequence are called [__terms__](gloss:sequence-term).
 Here are a few examples of sequences. Can you find their patterns and calculate
 the next two terms?
 
-{.text-center.s-orange.with-arrows} _{.n}3_, _{.n}6*{span.arrow}+3*_,
+{.text-center.s-orange.with-arrows.no-voice} _{.n}3_, _{.n}6*{span.arrow}+3*_,
 _{.n}9*{span.arrow(hidden)}+3*_, _{.n}12*{span.arrow(hidden)}+3*_,
 _{.n}15*{span.arrow(hidden)}+3*_, _{.n}[[18]]*{span.arrow(hidden)}+3*_
 _{.n}[[21]]*{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-0 blank-1")}Pattern: “Add 3 to the previous
 number to get the next one.”_
 
-{.text-center.s-teal.with-arrows} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
+{.text-center.s-teal.with-arrows.no-voice} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
 _{.n}16*{span.arrow(hidden)}+6*_, _{.n}22*{span.arrow(hidden)}+6*_,
 _{.n}28*{span.arrow(hidden)}+6*_, _{.n}[[34]]*{span.arrow(hidden)}+6*_,
 _{.n}[[40]]*{span.arrow(hidden)}+6*_, …
 _{span.pattern.reveal(when="blank-2 blank-3")} Pattern: “Add 6 to the previous
 number to get the next one.”_
 
-{.text-center.s-purple.with-arrows} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
+{.text-center.s-purple.with-arrows.no-voice} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
 _{.n}7*{span.arrow(hidden)}+3*_, _{.n}8*{span.arrow(hidden)}+1*_,
 _{.n}11*{span.arrow(hidden)}+3*_, _{.n}[[12]]*{span.arrow(hidden)}+1*_,
 _{.n}[[15]]*{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-4 blank-5")} Pattern: “Alternatingly add 1 and
 add 3 to the previous number, to get the next one.”_
 
-{.text-center.s-lime.with-arrows} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
+{.text-center.s-lime.with-arrows.no-voice} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
 _{.n}4*{span.arrow(hidden)}×2*_, _{.n}8*{span.arrow(hidden)}×2*_,
 _{.n}16*{span.arrow(hidden)}×2*_, _{.n}[[32]]*{span.arrow(hidden)}×2*_,
 _{.n}[[64]]*{span.arrow(hidden)}×2*_, …
@@ -122,27 +122,27 @@ Sequences in mathematics don’t always have to be numbers. Here is a sequence
 that consists of geometric shapes – triangles of increasing size:
 
 ::: column(width=24 parent="padded-thin")
-{.text-center} __1__
+{.text-center.no-voice} __1__
 
     include svg/triangle-1.svg
 ::: column(width=52)
-{.text-center} __3__
+{.text-center.no-voice} __3__
 
     include svg/triangle-2.svg
 ::: column(width=80)
-{.text-center} __6__
+{.text-center.no-voice} __6__
 
     include svg/triangle-3.svg
 ::: column(width=108)
-{.text-center.b} [[10]]
+{.text-center.b.no-voice} [[10]]
 
     include svg/triangle-4.svg
 ::: column(width=136)
-{.text-center.b} [[15]]
+{.text-center.b.no-voice} [[15]]
 
     include svg/triangle-5.svg
 ::: column(width=164)
-{.text-center.b} [[21]]
+{.text-center.b.no-voice} [[21]]
 
     include svg/triangle-6.svg
 :::
@@ -153,7 +153,7 @@ that consists of geometric shapes – triangles of increasing size:
 At every step, we’re adding one more row to the previous triangle. The length of
 these new rows also increases by one every time. Can you see the pattern?
 
-{.text-center.s-orange.with-arrows} _{.n}1_, _{.n}3*{span.arrow}+2*_,
+{.text-center.s-orange.with-arrows.no-voice} _{.n}1_, _{.n}3*{span.arrow}+2*_,
 _{.n}6*{span.arrow}+3*_, _{.n}10*{span.arrow}+4*_,
 _{.n}15*{span.arrow}+5*_, _{.n}21*{span.arrow}+6*_
 _{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
@@ -173,8 +173,7 @@ We can also describe this pattern using a special [formula](gloss:formula):
 
 To get the _n_-th triangle number, we take the [[previous|first|next]] triangle
 number and add _n_. For example, if _n_&nbsp;=&nbsp;${n}{n|5|2,20,1}, the
-formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
-= <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
+formula becomes `x_var("n") = x_var("n-1") + var("n")`.
 
 ---
 > id: recursive-1
@@ -193,27 +192,27 @@ Another sequence which consists of geometric shapes are the __square numbers__.
 Every term is formed by increasingly large squares:
 
 ::: column(width=24 parent="padded-thin squares")
-{.text-center} __1__
+{.text-center.no-voice} __1__
 
     include svg/square-1.svg
 ::: column(width=50)
-{.text-center} __4__
+{.text-center.no-voice} __4__
 
     include svg/square-2.svg
 ::: column(width=76)
-{.text-center} __9__
+{.text-center.no-voice} __9__
 
     include svg/square-3.svg
 ::: column(width=102)
-{.text-center.b} [[16]]
+{.text-center.b.no-voice} [[16]]
 
     include svg/square-4.svg
 ::: column(width=128)
-{.text-center.b} [[25]]
+{.text-center.b.no-voice} [[25]]
 
     include svg/square-5.svg
 ::: column(width=154)
-{.text-center.b} [[36]]
+{.text-center.b.no-voice} [[36]]
 
     include svg/square-6.svg
 :::
@@ -269,7 +268,7 @@ First, though, let’s look at something completely different: __action sequence
 photography__. A photographer takes many shots in quick succession, and then
 merges them into a single image:
 
-    figure: x-media(src="images/action-1.jpg" width=640 height=320)
+    figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
 Can you see how the skier forms a sequence? The pattern is not addition or
 multiplication, but a geometric [transformation](gloss:rigid-transformation).
@@ -283,27 +282,27 @@ Here are a few more examples of action sequence photography for your enjoyment:
 
 ::: column(width=320 parent="padded-thin")
 
-    x-media(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox alt="Jumping Volleyball Player")
 
 ::: column(width=320)
 
-    x-media(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox alt="Wind Surfing")
 
 ::: column(width=320)
 
-    x-media(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
+    x-img(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox alt="Snowboard Jump")
 
 ::: column(width=320)
 
-    x-media(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox alt="Mountain Bike Jump")
 
 ::: column(width=320)
 
-    x-media(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox alt="Mountain Bike Jump")
 
 ::: column(width=320)
 
-    x-media(src="images/action-7.jpg" width=320 height=160 lightbox)
+    x-img(src="images/action-7.jpg" width=320 height=160 lightbox alt="Kite Surfing")
 
 :::
 
@@ -331,7 +330,7 @@ consecutive observations is the same in both cases: [[76]] years.
 
 ::: column(width=320)
 
-    x-media(width=320 height=256 src="images/halley.jpg")
+    x-img(width=320 height=256 src="images/halley.jpg" alt="Halley’s Comet")
     p.caption Image of Halley’s Comet,#[br]taken in 1986 on Easter Island
 
 :::
@@ -344,7 +343,7 @@ which is now called _Halley’s comet_. It is orbiting around the sun and passes
 Earth approximately every 76 years. He also predicted when the comet would be
 visible next:
 
-{.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
+{.text-center.s-orange.s-large.with-arrows.no-voice} _{span.n}1530_,
 _{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
 _{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
 _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
@@ -358,11 +357,11 @@ know that Halley’s comet was observed by ancient astronomers as early as 240 B
 
     figure
       .row
-        x-media(src="images/halley-1.jpg" width=160 height=180)
-        x-media(src="images/halley-2.jpg" width=173 height=180 lightbox)
-        x-media(src="images/halley-3.jpg" width=200 height=180 lightbox)
-        x-media(src="images/halley-4.jpg" width=130 height=180 lightbox)
-      p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
+        x-img(src="images/halley-1.jpg" width=160 height=180)
+        x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
+        x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
+        x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
+      p.caption Depictions of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
 > id: ball
@@ -385,7 +384,7 @@ The scientists noticed that the ball loses 20% of its height after every bounce.
 In other words, the maximum height of every bounce is 80% of the previous one.
 This allowed them to predict the height of every following bounce:
 
-{.text-center.s-teal.s-large.with-arrows} _{span.n}10_,
+{.text-center.s-teal.s-large.with-arrows.no-voice} _{span.n}10_,
 _{span.n}8*{span.arrow}×0.8*_, _{.n}[[6.4]]*{span.arrow}×0.8*_,
 _{span.n}[[5.12]]*{span.arrow}×0.8*_,
 _{span.n.reveal}4.096*{span.arrow}×0.8*_*{span.reveal},*
@@ -442,51 +441,51 @@ are?
 
 ::: column(width=330 parent="ag-select")
 
-{.text-center.s-grey.s-small} _{span.n}2_, _{span.n}4_, _{span.n}8_,
+{.text-center.s-grey.s-small.no-voice} _{span.n}2_, _{span.n}4_, _{span.n}8_,
 _{span.n}16_, _{span.n}32_, _{span.n}64_, …
 
 ::: column(width=320)
 
-is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-0")}, with
+{.no-voice} is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-0")}, with
 ratio [[2]]._
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small} _{span.n}2_, _{span.n}5_, _{span.n}8_,
+{.text-center.s-grey.s-small.no-voice} _{span.n}2_, _{span.n}5_, _{span.n}8_,
 _{span.n}11_, _{span.n}14_, _{span.n}17_, …
 
 ::: column(width=320)
 
-is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-2")}, with
+{.no-voice} is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-2")}, with
 difference [[3]]._
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small} _{span.n}17_, _{span.n}13_, _{span.n}9_,
+{.text-center.s-grey.s-small.no-voice} _{span.n}17_, _{span.n}13_, _{span.n}9_,
 _{span.n}5_, _{span.n}1_, _{span.n}–3_, …
 
 ::: column(width=320)
 
-is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-4")}, with
+{.no-voice} is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-4")}, with
 difference [[-4]]._
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small} _{span.n}2_, _{span.n}4_, _{span.n}7_,
+{.text-center.s-grey.s-small.no-voice} _{span.n}2_, _{span.n}4_, _{span.n}7_,
 _{span.n}11_, _{span.n}16_, _{span.n}22_, …
 
 ::: column(width=320)
 
-is [[neither|arithmetic|geometric]]_{span.reveal(when="blank-6")}._
+{.no-voice} is [[neither|arithmetic|geometric]]_{span.reveal(when="blank-6")}._
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small} _{span.n}40_, _{span.n}20_, _{span.n}10_,
+{.text-center.s-grey.s-small.no-voice} _{span.n}40_, _{span.n}20_, _{span.n}10_,
 _{span.n}5_, _{span.n}2.5_, _{span.n}1.25_, …
 
 ::: column(width=320)
 
-is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-7")}, with
+{.no-voice} is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-7")}, with
 ratio [[0.5]]._
 
 :::
@@ -503,11 +502,11 @@ the values of `a`, _d_ and _r_. Can you find any patterns?
 
 #### {.m-red} Arithmetic Sequence
 
-{.text-center} `a` = ${a}{a|2|-10,10,0.2}, _d_ = ${d}{d|2|-10,10,0.2}
+{.text-center.no-voice} `a` = ${a}{a|2|-10,10,0.2}, _d_ = ${d}{d|2|-10,10,0.2}
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${arithmetic(a,d,0)}_,
+{.text-center.s-red.s-small.no-voice} _{span.n}${arithmetic(a,d,0)}_,
 _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
@@ -519,11 +518,11 @@ _{span.n}${arithmetic(a,d,5)}_, …
 
 #### {.m-green} Geometric Sequence
 
-{.text-center} `a` = ${b}{b|2|-10,10,0.2}, _r_ = ${r}{r|2|-10,10,0.2}
+{.text-center.no-voice} `a` = ${b}{b|2|-10,10,0.2}, _r_ = ${r}{r|2|-10,10,0.2}
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${geometric(b,r,0)}_,
+{.text-center.s-red.s-small.no-voice} _{span.n}${geometric(b,r,0)}_,
 _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
@@ -540,21 +539,21 @@ sequences__ look very similar: if the difference is positive, they steadily
 {.reveal(when="blank-0 blank-1")} Geometric sequences, on the other hand, can
 behave completely differently based on the values of `a` and *r*:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-If _{span.var-action}`r > 1`_, the terms will [[quickly get bigger|quickly
-decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
-Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
+If [`r > 1`](action:set(2,2)), the terms will [[quickly get bigger|quickly decrease|get closer to
+zero]], _{span.reveal(when="blank-2")}up to infinity. Mathematicians say that the sequence
+[__diverges__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
-closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
-We say that the sequence [__converges__](gloss:sequence-convergence)._
+If [`–1 < r < 1`](action:set(10,0.6)), the terms will always [[get closer to 0|decrease to negative
+infinity|get smaller]]. _{span.reveal(when="blank-3")}We say that the sequence
+[__converges__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-If _{span.var-action}`r < -1`_, the terms will alternate between positive and
+If [`r < -1`](action:set(3,-1.4)), the terms will alternate between positive and
 negative, while their [[absolute value|inverse|difference]] gets bigger.
 
 :::
@@ -575,11 +574,11 @@ geometric sequences:
 
 ::: column.grow
 
-{.text-center} `x_n =` [[`x_(n-1) + d`|`x_(n-1) × d`|`x_d + n`]]
+{.text-center.no-voice} `x_n =` [[`x_(n-1) + d`|`x_(n-1) × d`|`x_d + n`]]
 
 ::: column.grow
 
-{.text-center} `x_n =` [[`x_(n-1) × r`|`x_(n-1) - r`|`x_n - r + n`]]
+{.text-center.no-voice} `x_n =` [[`x_(n-1) × r`|`x_(n-1) - r`|`x_n - r + n`]]
 
 :::
 
@@ -595,39 +594,39 @@ that tells us the value of the *n*th term directly.
 
 For __{.m-red}arithmetic sequences__, we have to add _d_ at every step:
 
-{.ag-equation} `x_1 =` `a`
+{.ag-equation.no-voice} `x_1 =` `a`
 
-{.ag-equation} `x_2 =` `a + d`
+{.ag-equation.no-voice} `x_2 =` `a + d`
 
-{.ag-equation} `x_3 =` `a + d + d`
+{.ag-equation.no-voice} `x_3 =` `a + d + d`
 
-{.ag-equation} `x_4 =` *{x-equation(solution="a+d+d+d")}*
+{.ag-equation.no-voice} `x_4 =` *{x-equation(solution="a+d+d+d")}*
 
-{.ag-equation.reveal(when="eqn-0")} `x_5 =` *{x-equation(solution="a+d+d+d+d")}*
+{.ag-equation.no-voice.reveal(when="eqn-0")} `x_5 =` *{x-equation(solution="a+d+d+d+d")}*
 
 {.reveal(when="eqn-1")} At the *n*th term, we are adding [[`n-1`|`n`|`n+1`]]
 copies of _d_, so the general formula is
 
-{.ag-equation.reveal(when="blank-0")} `x_n = a + d × (n-1)`.
+{.ag-equation.no-voice.reveal(when="blank-0")} `x_n = a + d × (n-1)`.
 
 ::: column.grow
 
 For __{.m-green}geometric sequences__, we have to multiply _r_ at every step:
 
-{.ag-equation} `x_1 = a`
+{.ag-equation.no-voice} `x_1 = a`
 
-{.ag-equation} `x_2 = a × r`
+{.ag-equation.no-voice} `x_2 = a × r`
 
-{.ag-equation} `x_3 = a × r × r`
+{.ag-equation.no-voice} `x_3 = a × r × r`
 
-{.ag-equation} `x_4 =` *{x-equation(solution="a×r×r×r")}*
+{.ag-equation.no-voice} `x_4 =` *{x-equation(solution="a×r×r×r")}*
 
-{.ag-equation.reveal(when="eqn-2")} `x_5 =` *{x-equation(solution="a×r×r×r×r")}*
+{.ag-equation.no-voice.reveal(when="eqn-2")} `x_5 =` *{x-equation(solution="a×r×r×r×r")}*
 
 {.reveal(when="eqn-3")} At the *n*th term, we are multiplying [[`n-1`|`n`|`n+1`]]
 copies of _r_, so the general formula is
 
-{.ag-equation.reveal(when="blank-1")} `x_n = a × r^(n-1)`.
+{.ag-equation.no-voice.reveal(when="blank-1")} `x_n = a × r^(n-1)`.
 
 :::
 
@@ -672,7 +671,7 @@ Here is a short clip from the movie _Pay it Forward_, where 12-year-old Trevor
 explains his idea for making the world a better place:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward-poster.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
@@ -686,7 +685,7 @@ person can have a huge impact on the world:
 Notice how the number of people at every step forms a [[geometric sequence|arithmetic
 sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
 
-{.text-center.s-orange.with-arrows.reveal(when="blank-1")} _{span.n}1_,
+{.text-center.s-orange.with-arrows.no-voice.reveal(when="blank-1")} _{span.n}1_,
 _{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
 _{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
 _{span.n}[[243]]*{span.arrow}×3*_, …
@@ -709,7 +708,7 @@ than are currently alive on Earth.
 This sequence of numbers has a special name: the __powers of 3__. As you can
 see, every term is actually just a different [power](gloss:powers) of 3:
 
-{.text-center.s-orange} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
+{.text-center.s-orange.no-voice} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
 _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 ---
@@ -843,27 +842,27 @@ The __triangle numbers__ are generated by creating triangles of progressively
 larger size:
 
 ::: column(width=24 parent="padded-thin")
-{.text-center} __1__
+{.text-center.no-voice} __1__
 
     include svg/triangle-1.svg
 ::: column(width=52)
-{.text-center} __3__
+{.text-center.no-voice} __3__
 
     include svg/triangle-2.svg
 ::: column(width=80)
-{.text-center} __6__
+{.text-center.no-voice} __6__
 
     include svg/triangle-3.svg
 ::: column(width=108)
-{.text-center} __10__
+{.text-center.no-voice} __10__
 
     include svg/triangle-4.svg
 ::: column(width=136)
-{.text-center} __15__
+{.text-center.no-voice} __15__
 
     include svg/triangle-5.svg
 ::: column(width=164)
-{.text-center} __21__
+{.text-center.no-voice} __21__
 
     include svg/triangle-6.svg
 :::
@@ -879,11 +878,11 @@ playing billiards: they are both triangle numbers!
 
 ::: column(width=320)
 
-    x-media(src="images/bowling.jpg" width=320 height=240)
+    x-img(src="images/bowling.jpg" width=320 height=240)
 
 ::: column(width=320)
 
-    x-media(src="images/billiard.jpg" width=320 height=240)
+    x-img(src="images/billiard.jpg" width=320 height=240)
 
 :::
 
@@ -926,7 +925,7 @@ again throughout this course. One particularly interesting fact is that _any_
 whole number can be written as the sum of at most three triangle numbers:
 
 ::: column(width=140 parent="triangle-sum")
-{.text-center} ${n}{n|42|1,100,1}
+{.text-center.no-voice} ${n}{n|42|1,100,1}
 
     svg.t-sum(width=140 height=140)
     x-gesture(target="#triangle-sums x-var" slide="100,0")
@@ -934,21 +933,21 @@ whole number can be written as the sum of at most three triangle numbers:
 ::: column(width=40)
 {.text-center} =
 ::: column(width=140)
-{.text-center} __{.t-sum}__
+{.text-center.no-voice} __{.t-sum}__
 
     svg.t-sum.red(width=140 height=140)
 
 ::: column(width=40)
 {.text-center} +
 ::: column(width=140)
-{.text-center} __{.t-sum}__
+{.text-center.no-voice} __{.t-sum}__
 
     svg.t-sum.blue(width=140 height=140)
 
 ::: column(width=40)
 {.text-center} +
 ::: column(width=140)
-{.text-center} __{.t-sum}__
+{.text-center.no-voice} __{.t-sum}__
 
     svg.t-sum.green(width=140 height=140)
 
@@ -961,9 +960,9 @@ Gauss](bio:gauss) – at the age of 19!
 ---
 > id: triangle-investigate
 
-::: .box.problem-box
-    .box-title: h3 Problem Solving
-::: .box-body
+::: .box.f-blue
+
+#### Problem Solving
 
 What is the sum of the first 100 positive [integers](gloss:integer)? In other
 words, what is the value of
@@ -975,7 +974,6 @@ numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 1000 positive integers?
 
 :::
-:::
 
 ---
 > id: square-numbers
@@ -984,7 +982,7 @@ numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 
 Another sequence that is based on geometric shapes are the __square numbers__:
 
-{.text-center.s-purple.with-arrows} _{.n}1_,
+{.text-center.s-purple.with-arrows.no-voice} _{.n}1_,
 _{.n}4*{span.arrow.reveal(when="blank-4")}+3*_,
 _{.n}9*{span.arrow.reveal(when="blank-4")}+5*_,
 _{.n}16*{span.arrow.reveal(when="blank-4")}+7*_,
@@ -1057,32 +1055,32 @@ polygons?
 
 ### Tetrahedral and Cubic Numbers
 
-Of course, we also don’t have to limit ourselves to 2-dimensional shapes and
+Of course, we also don’t have to limit ourselves to two-dimensional shapes and
 patterns. We could stack spheres to form small pyramids, just like how you would
 stack oranges in a supermarket:
 
 ::: column(width=64 parent="padded-thin")
-{.text-center} __1__
+{.text-center.no-voice} __1__
 
     x-tetrahedron(size=160 layers=1 style="margin: 0 -48px")
 
 ::: column(width=88)
-{.text-center} __[[4]]__
+{.text-center.no-voice} __[[4]]__
 
     x-tetrahedron(size=160 layers=2 style="margin: 0 -36px")
 
 ::: column(width=112)
-{.text-center} __[[10]]__
+{.text-center.no-voice} __[[10]]__
 
     x-tetrahedron(size=160 layers=3 style="margin: 0 -24px")
 
 ::: column(width=136)
-{.text-center} __20__
+{.text-center.no-voice} __20__
 
     x-tetrahedron(size=160 layers=4 style="margin: 0 -12px")
 
 ::: column(width=160)
-{.text-center} __35__
+{.text-center.no-voice} __35__
 
     x-tetrahedron(size=160 layers=5)
 
@@ -1149,24 +1147,24 @@ male and female).
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -1175,7 +1173,7 @@ male and female).
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
@@ -1195,7 +1193,7 @@ male and female).
 
 {.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
 previous month, plus 5 new sets of babies. Can you detect a pattern in this
-sequence? _{button.next-step} Continue_
+sequence? [Continue](btn:next)
 
 ---
 > id: rabbits-2
@@ -1221,7 +1219,7 @@ _{.n}[[144]]_, …
 {.reveal(when="blank-5")} So after 12 months, you’ll have 144 pairs of rabbits!
 
     figure.reveal(when="blank-5")
-      x-media(src="images/rabbits.jpg" width=600 height=230)
+      x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
 > id: fibonacci
@@ -1232,7 +1230,7 @@ Sequence__](gloss:fibonacci-numbers), named after the Italian mathematician
 
 ::: column.grow
 When Fibonacci was born in 1175, most people in Europe still used the [Roman
-numeral system](gloss:roman-numerals) for numbers (e.g. IVX or MCMLIV).
+numeral system](gloss:roman-numerals) for numbers (like XIV or MCMLIV).
 Fibonacci’s father was a merchant, and together they travelled to Northern
 Africa as well as the Middle East. It was there that Fibonacci first learned the
 [Arabic numeral system](gloss:arabic-numerals).
@@ -1244,7 +1242,7 @@ use them today.
 
 ::: column(width=300)
 
-    x-media(src="images/fibonacci.jpg" width=300 height=300)
+    x-img(src="images/fibonacci.jpg" width=300 height=300)
     .caption Portrait of Leonardo Fibonacci
 
 :::
@@ -1253,7 +1251,7 @@ On one of the pages in his book, he also investigated the breeding patterns of
 rabbits – that’s why the Fibonacci numbers were named after him.
 
     figure
-      x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
+      x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
       p.caption Pages from Fibonacci’s #[em Liber Abaci]
 
 ---
@@ -1269,7 +1267,7 @@ spirals there are in each direction?
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1282,7 +1280,7 @@ counterclockwise spirals.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1311,7 +1309,7 @@ nature likes the Fibonacci sequence, which you’ll learn more about later.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1368,32 +1366,32 @@ is the ratio of its width and its height:
 
     include svg/golden-1.svg
 
-{.text-center} `2/1` = 2
+{.text-center.no-voice} `2/1` = 2
 ::: column(width=100)
 
     include svg/golden-2.svg
 
-{.text-center} `3/2` = 1.5
+{.text-center.no-voice} `3/2` = 1.5
 ::: column(width=100)
 
     include svg/golden-3.svg
 
-{.text-center} `5/3` = 1.666…
+{.text-center.no-voice} `5/3` = 1.666…
 ::: column(width=100)
 
     include svg/golden-4.svg
 
-{.text-center} `8/5` = 1.6
+{.text-center.no-voice} `8/5` = 1.6
 ::: column(width=100)
 
     include svg/golden-5.svg
 
-{.text-center} <mfrac><mn>[[13]]</mn><mn>[[8]]</mn></mfrac> _{span.reveal(when="blank-0 blank-1")}= 1.625_
+{.text-center.no-voice} `input(13) / input(8) reveal(= 1.625, "blank-0 blank-1")`
 ::: column(width=100)
 
     include svg/golden-6.svg
 
-{.text-center} <mfrac><mn>[[21]]</mn><mn>[[13]]</mn></mfrac> _{span.reveal(when="blank-2 blank-3")}= 1.62…_
+{.text-center.no-voice} `input(21) / input(13) reveal(= 1.62…, "blank-2 blank-3")`
 :::
 
 ---
@@ -1402,7 +1400,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and is usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1414,19 +1412,19 @@ two examples:
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/pantheon.jpg" width=320 height=198)
-      img(src="images/pantheon.png" width=320 height=198)
+      x-img(src="images/pantheon.jpg" width=320 height=198)
+      img(src="images/pantheon-box.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
-{.caption} The Greek sculptor Phidias is said to have used the Golden ratio
+{.caption} The Greek sculptor Phidias is said to have used the golden ratio
 when designing the _Parthenon_ in Athens. The first letter of his name, `φ`, is
 the symbol we now use for the golden ratio.
 
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/dali.jpg" width=320 height=198)
-      img(src="images/dali.png" width=320 height=198)
+      x-img(src="images/dali.jpg" width=320 height=198)
+      img(src="images/dali-box.png" width=320 height=198)
 
 {.caption} _The Sacrament of the Last Supper_, by Spanish artist Salvador Dalí,
 is one of many paintings in the golden ratio. In the background, you can also
@@ -1490,48 +1488,40 @@ might look like with different angles between its seeds:
 
     .sunflower-spiral(slot="stage")
       .value
-      x-slider(steps=1000 speed=0.1 no-play)
+      x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
-all seeds will grow in a single long row away from the center.
+{div(slot="legend")} If the angle is [0°](action:set(0)), all seeds will grow in a single long row
+away from the center.
 
-{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0.5)}`1/2`_
-of a full a rotation (180°), the seeds will alternate between two separate
-“arms” that move away from the center.
+{div.inline(slot="legend")} If the angle is [`1/2`](action:set(0.5)) of a full a rotation (180°),
+the seeds will alternate between two separate “arms” that move away from the center.
 
-{div.inline(slot="legend")} If the rotation is another fractional proportion of
-360°, for example _{span.fib-action(data-value=2/5)}`2/5`_ or
-_{span.fib-action(data-value=1/3)}`1/3`_ or _{span.fib-action(data-value=3/8)}`3/8`_,
-then the number of “arms” will be the same as the [[denominator|numerator|prime
-factor]] of that fraction.
+{div.inline(slot="legend")} If the rotation is another fractional proportion of 360°, for example
+[`2/5`](action:set(2/5)) or [`1/3`](action:set(1/3)) or [`3/8`](action:set(3/8)), then the number
+of “arms” will be the same as the [[denominator|numerator|prime factor]] of that fraction.
 
-{div(slot="legend")} Unfortunately “arms” are bad, because they mean that
-the seeds are not evenly distributed: all of the space between the arms is
-wasted. But if [rational numbers](gloss:rational-numbers) aren’t going to work,
-let’s try [irrational numbers](gloss:irrational-numbers)!
+{div(slot="legend")} Unfortunately “arms” are bad, because they mean that the seeds are not evenly
+distributed: all of the space between the arms is wasted. But if [rational numbers](gloss:rational-numbers)
+aren’t going to work, let’s try [irrational numbers](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi).
-But if the angle between seeds is _{span.fib-action(data-value=0.31831)}`1/pi`_
-of 360°, we still seem to get arms: 22 of them. That’s because the fraction
-`22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really need is
-an irrational number that _can’t_ be closely approximated by a simple fraction.
+{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi). But if the
+angle between seeds is [`1/pi`](action:set(0.31831)) of 360°, we still seem to get arms: 22 of them.
+That’s because the fraction `22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really
+need is an irrational number that _can’t_ be closely approximated by a simple fraction.
 
-{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio)
-is just that: the “most irrational” of all irrational numbers. If the angle
-between seeds is _{span.fib-action(data-value=0.6180339)}`1/phi`_ of 360°, they
-seem to be almost perfectly spaced. And this is precisely the angle that plants
-around the world are using.
+{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio) is just that:
+the “most irrational” of all irrational numbers. If the angle between seeds is
+[`1/phi`](action:set(0.6180339)) of 360°, they seem to be almost perfectly spaced. This is
+precisely the angle that plants around the world are using.
 :::
-
-    x-gesture(target=".fib-action")
 
 ---
 > id: sunflower-spiral-1
 
 ::: column(width=240)
 
-    x-media(src="images/flowers.jpg" width=240 height=400)
+    x-img(src="images/flowers.jpg" width=240 height=400)
 
 ::: column.grow
 
@@ -1544,7 +1534,7 @@ Nature also can’t solve equations to calculate the golden ratio – but over t
 course of millions of years, plants had plenty of time to try out different
 angles and discover the best one.
 
-Plants and animals always want grow in the most efficient way, and that is why
+Plants and animals always want to grow in the most efficient way, and that is why
 nature is full of regular, mathematical patterns.
 
 :::
@@ -1568,7 +1558,7 @@ It turns out that, whatever two starting numbers you pick, the resulting
 sequences share many properties. For example, the ratios of consecutive terms
 will _always_ [converge](gloss:sequence-convergence) to the golden ratio.
 
-{.text-center.s-purple.s-small}
+{.text-center.s-purple.s-small.no-voice}
 ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
 _{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_,
 _{span.n}${8×a+13×b}_, …
@@ -1579,9 +1569,9 @@ _{span.n}${8×a+13×b}_, …
 There are many other puzzles, patterns and applications related to Fibonacci
 numbers. Here are a few examples, which you can try yourself:
 
-::: .box.problem-box
-    .box-title: h3 Problem solving
-::: .box-body
+::: .box.f-blue
+
+#### Problem solving
 
 __1. Fibonacci Divisibility__
 
@@ -1607,16 +1597,15 @@ steps at a time. This means that there are many different possibilities for how 
 could go up a staircase. For example, if there are 5 steps, I have 8 different
 choices:
 
-    figure: x-media(src="images/stairs.svg" width=530 height=200)
+    figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 How many choices are there for staircase with 6, 7 or 8 steps? Can you detect
 a pattern? And how is this related to the Fibonacci numbers?
 
 :::
-:::
 
     figure
-      x-media(src="images/fibonachos.jpg" width=600 height=282)
+      x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
 
 
@@ -1698,7 +1687,7 @@ You can learn more about these and other properties of prime numbers in our
 course on [Divisibility and Primes](/course/divisibility/primes). They are
 some of the most important and most mysterious concepts in mathematics!
 
-    figure: img(src="images/primes.svg" width=480 height=156) 
+    figure: img(src="images/primes.svg" width=480 height=156)
 
 ---
 > id: perfect
@@ -1735,17 +1724,17 @@ of a number (excluding the number itself):
 
 Let’s compare these numbers with their sum of factors:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 For most numbers, the sum of its factors is [[less than|greater than|equal to]]
 itself. These numbers are called __deficient numbers__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 For a few numbers, the sum of its factors is greater than itself. These numbers
 are called __abundant numbers__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Only one number in the list above has a sum of factors that is _equal_ to itself:
 [[6]]. This is called a [__perfect number__](gloss:perfect-numbers).
@@ -1758,7 +1747,7 @@ Only one number in the list above has a sum of factors that is _equal_ to itself
 The next perfect number is 28, because if we add up all its factors we get
 `1 + 2 + 4 + 7 + 14 = 28`. After that, perfect numbers become much rarer:
 
-{.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
+{.text-center.s-purple.s-vertical.perfect-list.no-voice.no-voice} _{.n}6_, _{.n}28_,
 _{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}8,589,869,056_,
 _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 
@@ -1784,7 +1773,7 @@ mathematics_!
 
 ::: column(width=220)
 
-    x-media(src="images/euclid.jpg" width=220 height=269)
+    x-img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclid of Alexandria
 :::
@@ -1808,7 +1797,7 @@ a recursive formula like this:
 
 Let’s start with `x_1 = 5` and see what happens:
 
-{.text-center.s-orange.with-arrows} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
+{.text-center.s-orange.with-arrows.no-voice} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
 _{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
 _{.n}[[4]]*{span.arrow.reveal(when="blank-1")}÷2*_,
 _{.n}[[2]]*{span.arrow.reveal(when="blank-2")}÷2*_,
@@ -1826,7 +1815,7 @@ continue to repeat over and over again, forever.
 Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
 Then the sequence would look like this:
 
-{.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-red}_{.n}4_,
+{.text-center.no-voice} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.n}4_,
 _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 *{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
 
@@ -1841,7 +1830,7 @@ the terms of the sequence in a chart:
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Notice how some starting points end very quickly,
-while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
+while others (like [31](action:set(31)) or [47](action:set(47))) take more
 than one hundreds steps before they reach the 4, 2, 1 cycle.
 
 ---
@@ -1862,7 +1851,7 @@ followed by twenty zeros.
 
 ::: column(width=240)
 
-    x-media(src="images/storm.jpg" width=240 height=340)
+    x-img(src="images/storm.jpg" width=240 height=340)
 
 :::
 
@@ -1887,7 +1876,7 @@ above. Can you find the pattern?
 {.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
 _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: look-and-say-1
@@ -1896,7 +1885,7 @@ This sequence is called the __Look-and-Say__ sequence, and the pattern is just
 what the name says: you start with a 1, and every following term is what you
 get if you “read out loud” the previous one. Here is an example:
 
-    p: x-media(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
+    p: x-img(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
 Can you now find the next terms?
 
@@ -1918,7 +1907,7 @@ The British mathematician [John Conway](bio:conway) discovered that, no matter
 what number you pick as starting value, the sequence will eventually split into
 distinct “sections” that no longer interact with each other. Conway called this
 the _Cosmological Theorem_, and named the different sections using the chemical
-elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_. 
+elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_.
 
 ---
 > id: quiz
@@ -1932,39 +1921,38 @@ to behave almost randomly.
 In this quiz you can combine all your knowledge about sequences. There is just
 one goal: find the pattern and calculate the next two terms!
 
-::: .box.problem-box
-    .box-title: h3 Find the next number
-::: .box-body
+::: .box.f-blue
 
-{.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
+#### Find the next number
+
+{.text-center.s-yellow.no-voice} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
 _{span.pattern.reveal(when="blank-0 blank-1")} Pattern: Always +4_
 
-{.text-center.s-orange} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
+{.text-center.s-orange.no-voice} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
 _{.n}36_, _{.n}[[44]]_, _{.n}[[53]]_, …
 _{span.pattern.reveal(when="blank-2 blank-3")} Pattern: +3, +4, +5, +6, …_
 
-{.text-center.s-red} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
+{.text-center.s-red.no-voice} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
 _{.n}13_, _{.n}[[12]]_, _{.n}[[16]]_, …
 _{span.pattern.reveal(when="blank-4 blank-5")} Pattern: +4, –1, +4, –1, …_
 
-{.text-center.s-purple} _{span.n}2_, _{span.n}4_, _{.n}6_, _{.n}12_, _{.n}14_,
+{.text-center.s-purple.no-voice} _{span.n}2_, _{span.n}4_, _{.n}6_, _{.n}12_, _{.n}14_,
 _{.n}28_, _{.n}[[30]]_, _{.n}[[60]]_, …
 _{span.pattern.reveal(when="blank-6 blank-7")} Pattern: ×2, +2, ×2, +2, …_
 
-{.text-center.s-blue} _{span.n}1_, _{span.n}1_, _{.n}2_, _{.n}3_, _{.n}5_,
+{.text-center.s-blue.no-voice} _{span.n}1_, _{span.n}1_, _{.n}2_, _{.n}3_, _{.n}5_,
 _{.n}8_, _{.n}[[13]]_, _{.n}[[21]]_, …
 _{span.pattern.reveal(when="blank-8 blank-9")} Pattern: Fibonacci Numbers_
 
-{.text-center.s-teal} _{span.n}27_, _{span.n}28_, _{.n}30_, _{.n}15_, _{.n}16_,
+{.text-center.s-teal.no-voice} _{span.n}27_, _{span.n}28_, _{.n}30_, _{.n}15_, _{.n}16_,
 _{.n}18_, _{.n}[[9]]_, _{.n}[[10]]_, …
 _{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, ÷2, …_
 
-{.text-center.s-green} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
+{.text-center.s-green.no-voice} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
-:::
 :::
 
 
@@ -2017,21 +2005,21 @@ was known to other civilisations many centuries earlier:
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
+    x-img(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
 
 {.caption} In 450BC, the Indian mathematician [Pingala](bio:pingala) called the
 triangle the __“Staircase of Mount Meru”__, named after a sacred Hindu mountain.
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-2.jpg" width=200 height=280)
+    x-img(src="images/pascal-2.jpg" width=200 height=280)
 
 {.caption} In Iran, it was known as the __“Khayyam triangle”__ (مثلث خیام),
 named after the Persian poet and mathematician [Omar Khayyám](bio:khayyam).
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-3.jpg" width=200 height=280)
+    x-img(src="images/pascal-3.jpg" width=200 height=280)
 
 {.caption} In China, the mathematician Jia Xian also discovered the triangle.
 It was named after his successor, __“Yang Hui’s triangle”__ (杨辉三角).
@@ -2042,7 +2030,7 @@ Pascal’s triangle can be created using a very simple pattern, but it is filled
 with surprising patterns and properties. That’s why it has fascinated
 mathematicians across the world, for hundreds of years.
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 
 ---
@@ -2127,7 +2115,7 @@ Since 3003 is a triangle number, it actually appears two more times in the
 _third_ diagonals of the triangle – that makes eight occurrences in total.
 
 It is unknown if there are any other numbers that appear eight times in the
-triangle, or if there numbers that appear more than eight times. The American
+triangle, or if there are numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
 fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.
@@ -2226,7 +2214,7 @@ completely different methods, and then see how they are related.
     // -------------------------------------------------------------------------
 
     // ## The In-and-out Puzzle
-    // 
+    //
     // > section: in-and-out
     // > sectionStatus: dev
     // > id: in-and-out-intro
@@ -2241,18 +2229,18 @@ completely different methods, and then see how they are related.
     // a single person left, who would get the role.
 
     // A clever actress decided she would get the role. There were 10 people in
-    // her circle. Where must she stand to be the last one in the circle? 
+    // her circle. Where must she stand to be the last one in the circle?
 
     // An actor auditioning for a different part was faced with 20 in his circle.
     // Where should ! he stand?
-    
+
     // Find a pattern that tells you where to stand no matter how many people
-    // are in the circle. Why does it work? 
+    // are in the circle. Why does it work?
 
     // What if the director eliminates every mth person? Where should you stand
-    // in a circle of n? 
+    // in a circle of n?
 
-    // What about “in, in, out, out,” leaving two in and then kicking two out? 
+    // What about “in, in, out, out,” leaving two in and then kicking two out?
 
     // With eight people, for example, you’ll lost the even numbers on round one,
     // 3 and 7 on round two, and 5 on round three, making 1 the winner.
@@ -2262,7 +2250,7 @@ completely different methods, and then see how they are related.
     // person 1. So your answer for n people should be the same as for n-1,
     // except the people are relabeled with a number 2 greater. In other words,
     // if for the nth circle you stands in position p, for the n+1st circle you
-    // stand in position  p +2. However, this number may be larger than n+1, so
+    // stand in position p +2. However, this number may be larger than n+1, so
     // we have to reduce it mod n+1 if necessary. It’s possible to get a formula
     // for this, and that’s a nice challenge for kids who are ready for it. But
     // for most, just elucidating the pattern will be enough.
@@ -2336,7 +2324,7 @@ completely different methods, and then see how they are related.
     // Can you explain why this happens?
     // Now start with three numbers.
     // This time, we can generate a sequence where the next number is the mean of the last three numbers.
-    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163. 
+    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163.
     // What would happen if you continued this process indefinitely?
     // Choose some more sets of three starting numbers.
     // Can you find a relationship between your starting numbers and the limit of the sequence they generate?

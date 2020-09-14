@@ -15,7 +15,7 @@ Mustern begeistert und wollten sie erforschen und erklären. Zum ersten Mal bega
 sie, Mathematik nur „zum Spaß“ zu studieren, ohne eine bestimmte Anwendung im Sinn zu haben. 
 ::: column(width=300)
 
-    x-media(src="images/tablet.jpg" width=300 height=210)
+    x-img(src="images/tablet.jpg" width=300 height=210)
 
 {.caption} Eine babylonische Tontafel, datiert 1800 v. Chr., die geometrische
 Berechnungen enthält.
@@ -55,7 +55,7 @@ grundlegende Weise miteinander verbunden sein? Er war von seiner Entdeckung so b
 opferte, um den Göttern zu danken.
 
     figure
-      x-media(src="images/temple.svg" width=400 height=170)
+      x-img(src="images/temple.svg" width=400 height=170)
 
 Doch die bloße _Beobachtung_ einer solchen Verbindung reichte Thales nicht aus,
 er wollte verstehen, _warum_ das so ist, und überprüfen, ob das _immer_ gilt
@@ -76,36 +76,36 @@ Satelliten ins All. Hier sind noch ein paar weitere Beispiele:
 
 ::: column(width=200)
 
-    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+    x-img(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
 {.caption} Die Geometrie erlaubte es den alten Ägyptern, gigantische,
 perfekt regelmäßige Pyramiden zu bauen.
 ::: column(width=200)
 
-    x-media(src="images/sextant.jpg" width=200 height=200)
+    x-img(src="images/sextant.jpg" width=200 height=200)
 
 {.caption} Seefahrer verwenden Sextanten, um ihren Standort auf See zu bestimmen, wobei
 sie die von der Sonne oder den Sternen gebildeten Winkel verwenden.
 ::: column(width=200)
 
-    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
+    x-img(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
 
 {.caption} Geometrie wird benötigt, um realistische Videospiel- oder Filmgrafiken zu erstellen.
 ::: column(width=200)
 
-    x-media(src="images/plane.jpg" width=200 height=200)
+    x-img(src="images/plane.jpg" width=200 height=200)
 
 {.caption} Geometrie kann dabei helfen, neue Flugzeugmodelle zu entwerfen und zu testen, um sie
 sicherer und effizienter zu machen.
 ::: column(width=200)
 
-    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
+    x-img(src="images/cctv.jpg" lightbox width=200 height=200)
 
 {.caption} Geometrie war bei der Planung dieses Wolkenkratzers in Peking entscheidend - und
 um sicherzustellen, dass er nicht umkippt.
 ::: column(width=200)
 
-    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
+    x-img(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
 {.caption} Geometrie ermöglicht es uns, die Position von Sternen, Planeten und
 Satelliten in der Erdumlaufbahn vorherzusagen.
@@ -469,7 +469,7 @@ Mathematik-Lehrbuch über Tausende von Jahren verwendet.
 
 ::: column(width=220)
 
-    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+    x-img(src="images/elements.jpg" width=220 height=330 lightbox)
 
 :::
 
@@ -509,11 +509,11 @@ Schnüre, die in gleichen Abständen viele Knoten enthielten. Aber diese waren
 auch nicht ganz genau, und verschiedene Schnüre hatten die Knoten in
 leicht unterschiedlichen Abständen platziert.
 
-    figure: x-media(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
+    figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
 ::: column(width=200)
 
-    x-media(src="images/units.png" width=200 height=336)
+    x-img(src="images/units.png" width=200 height=336)
 
 :::
 
@@ -582,7 +582,7 @@ geraden Leiste und einem Zirkel "konstruieren"?
 
 ::: column(width=340)
 
-    x-media(src="images/archimedes.jpg" width=340 height=265)
+    x-img(src="images/archimedes.jpg" width=340 height=265)
 
 {.caption} Der griechische Mathematiker [Archimedes](bio:archimedes) beschäftigte sich mit
 Geometrie, als er von römischen Eroberern getötet wurde. Seine letzten Worte waren: "Stört meine
@@ -602,13 +602,13 @@ Kreise nicht".
 geraden Leiste und einem Zirkel.
 
 Zeichne zunächst eine Strecke an einer beliebigen Stelle im Feld rechts. Wähle das
-<x-target no-margins to="#equilateral .tool:nth-child(3)">Linienwerkzeug</x-target>
+[{.no-margins} Linienwerkzeug](->#equilateral_.tool:nth-child(3))
 aus und ziehe damit einfach vom Anfang bis zum Ende. Diese Strecke wird eine der Seiten
 des Dreiecks sein.
 
 {.reveal(when="segment0")} Zeichne anschließend zwei Kreise, die jeweils einen der Endpunkte
 der Strecke als Mittelpunkt haben und durch den anderen Endpunkt gehen. Wähle das
-<x-target no-margins to="#equilateral .tool:nth-child(5)">Kreiswerkzeug</x-target>
+[{.no-margins} Kreiswerkzeug](->#equilateral_.tool:nth-child(5))
 aus und ziehe damit einfach jeweils von einem Endpunkt zum anderen.
 
 {.reveal(when="circle1 circle2")} Wir haben bereits zwei Eckpunkte des Dreiecks,
@@ -628,14 +628,6 @@ ist es tatsächlich ein gleichseitiges Dreieck._
 ### Mittelpunkte und Mittelsenkrechten (Streckensymmetrale)
 
 {.todo} Demnächst - Konstruktion von Mittelpunkten und Mittelsenkrechten
-
-    // Ein Mittelpunkt ist ein Punkt auf einer Strecke, der ihn in zwei kongruente
-    // Segmente unterteilt. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
-    // `bar(AC)`.
-    // 
-    // Eine Gerade, eine Strecke oder ein Strahl, die im rechten Winkel durch den Mittelpunkt einer anderen Strecke 
-    // verläuft, wird als __Streckensymmetrale__ bezeichnet. `bar(DE)` ist der
-    // Senkrechthälfte von `bar(AC)`, also `bar(AB) ~= bar(BC)` und `bar(AC) _|_ bar(DE)`.
 
 ---
 > id: angle-bisector
@@ -663,7 +655,7 @@ Tempel bauen würden, mit _genau dem doppelten_ Volumen des vorhandenen.
 
 ::: column(width=300)
 
-    x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
+    x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
     
 {.caption} Eine Rekonstruktion eines Tempels in Delphi
 :::
@@ -748,17 +740,17 @@ schöne und beeindruckende Designs entwerfen - alle diese Figuren wurden aus nic
 als rechteckigen Papierblättern gebaut:
 
 ::: column(width=186)
-    x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+    x-img(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+    x-img(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+    x-img(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+    x-img(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
 :::
 
 ---
@@ -812,7 +804,7 @@ wie lange er sein soll, indem du den Abstand der Faltung wählst.
 Dieser _Kranich_ ist eines der ältesten und bekanntesten Origami-Modelle. Wir haben noch viele
 weitere [Anleitungen für Origami-Modelle](/origami), die du ausprobieren kannst!
 
-    figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
+    figure: x-img(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
@@ -876,7 +868,7 @@ Die Dreiteilung eines Winkels und die Würfelverdoppelung sind mit nur einer Pap
 Natürlich ist es unmöglich, _geschwungene_ Linien zu falten, und man bekommt die Quadratur des Kreises auch mit Origami
 nicht hin.
 
-    figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
+    figure: x-img(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
 ---
 > id: origami-applications
@@ -904,11 +896,6 @@ Origami-Techniken ermöglichen es, dass sich Solarmodule "entfalten", wenn sie d
 besonders clevere Faltungen sind unglaublich kompakt und benötigen nur wenige Motoren
 und andere mechanische Komponenten.
 
-    // Eine davon ist die __Miura-Faltung__, die von _Korio Miura_ erfunden wurde.
-    // Das Gleiche gilt auch für die Spiegel von Teleskopen im Weltraum. Größere Spiegel
-    // können bessere Bilder liefern. Ingenieure können mit Origami große Spiegel bauen, die
-    // sich sehr effizient zusammenklappen lassen, wenn sie auf Raketen geladen werden.
-
 :::
 
 ---
@@ -935,7 +922,7 @@ Blut des Patienten ausdehnen, und so verstopfte Arterien oder Venen vergrößern
 
 ::: column(width=300)
 
-    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
+    x-img(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
 
 ::: column.grow
 
@@ -950,25 +937,6 @@ Zugang zu verschaffen. Dieses Bild ist von einem Prototyp, der an der
 Hiroshima University in Japan entworfen wurde.
 
 :::
-
-    // ---
-    // > id: origami-applications-2
-    // > goals: video
-    // 
-    // ::: column(width=300)
-    // 
-    // x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
-    // 
-    // ::: column.grow
-    // #### Stadiondächer
-    // 
-    // Brücken sind schwierig zu bauen, da sie große Entfernungen
-    // ohne Zwischenstütze überbrücken müssen. Dies gilt auch für die Dächer von
-    // Sportstadien, die eine große Fläche bedecken müssen, ohne von Säulen getragen zu werden.
-    // 
-    // Das Dach des neuen Falcon-Stadions in Atlanta besteht aus acht riesigen
-    // Modulen, die sich beim Öffnen oder Schließen drehen können.
-    // :::
 
 ---
 > id: origami-applications-4
@@ -1016,7 +984,7 @@ die höchste "Faltungsrate" im Tierreich:
 
 ::: column(width=300)
 
-    x-media(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-img(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
 
 ::: column(width=300)
 

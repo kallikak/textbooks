@@ -4,9 +4,10 @@
 // =============================================================================
 
 
-import {list, wait, tabulate, isOneOf, Color, Obj} from '@mathigon/core';
-import {clamp, Point, toWord, roundTo, Polygon, Sector, round, Angle, Rectangle, numberFormat, Random} from '@mathigon/fermat';
-import {$N, slide, animate, Draggable, InputView, hover, CanvasView, ElementView, SVGView, SVGParentView} from '@mathigon/boost';
+/// <reference types="THREE"/>
+import {Color, isOneOf, list, Obj, tabulate, wait} from '@mathigon/core';
+import {Angle, clamp, numberFormat, Point, Polygon, Random, Rectangle, round, roundTo, Sector, toWord} from '@mathigon/fermat';
+import {$N, animate, CanvasView, Draggable, ElementView, hover, InputView, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Burst} from '../shared/components/burst';
 import {ConicSection} from '../shared/components/conic-section';
 import {rotateDisk} from '../shared/components/disk';
@@ -53,7 +54,7 @@ export function similar($step: Step) {
   let hasShownResizeGesture = false;
 
   function complete(i: number, $handle: ElementView, $outline: ElementView,
-                    $outlineHalo: ElementView) {
+      $outlineHalo: ElementView) {
     if (isCompleted[i]) return;
     isCompleted[i] = true;
 
@@ -66,7 +67,8 @@ export function similar($step: Step) {
   }
 
   for (const c of circles) {
-    let rReady = false, cReady = false;
+    let rReady = false;
+    let cReady = false;
 
     const $handle = $N('circle', {class: 'handle', r: 10}, $svg);
     const $outlineHalo = $N('circle', {class: 'outline-halo', r: c[2]}, $strokes) as SVGView;
@@ -176,7 +178,8 @@ export function wheel($step: Step) {
         $pi.enter('pop');
         done = true;
       }
-    }
+    },
+    accessible: true
   });
 
   $wheel.css('cursor', 'ew-resize');
@@ -198,7 +201,9 @@ export function piColours($step: Step) {
         for (const $c of $filter[i]) $c.addClass('hide');
         $step.score('hover');
       },
-      exit() { for (const $c of $filter[i]) $c.removeClass('hide'); }
+      exit() {
+        for (const $c of $filter[i]) $c.removeClass('hide');
+      }
     });
   }
 }
@@ -460,11 +465,7 @@ export function radians($step: Step) {
       $step.model.b = arc2.at(p);
     }, 600);
   }
-
-  const $actions = $step.$$('.var-action');
-  $actions[0].on('click', () => setState(0));
-  $actions[1].on('click', () => setState(1));
-  $actions[2].on('click', () => setState(2));
+  $step.model.setState = setState;
 
   const $equations = $step.$$('x-equation');
   $equations[0].on('solve', () => setState(1));
@@ -550,13 +551,11 @@ export function earthArc($step: Step) {
 }
 
 export function arcs1($step: Step) {
-  const $action = $step.$('.var-action')!;
   const $geopad = $step.$('x-geopad') as Geopad;
-
-  $action.on('click', () => {
+  $step.model.set90Deg = () => {
     $geopad.animatePoint('b', new Point(240, 140));
     $geopad.animatePoint('b', new Point(140, 40));
-  });
+  };
 }
 
 export function eratosthenes1($step: Step) {
@@ -648,8 +647,9 @@ export function obliqueCylinder($step: Step) {
     $solid.addArrow([0, -1.4, 0], [0, 1.4, 0], 0x0f82f2);
     $solid.addLabel('h', [0, 0, 0], 0x0f82f2, '-10px 0 0 4px');
 
-    for (const obj of [top, topCircle, bottom, bottomCircle])
+    for (const obj of [top, topCircle, bottom, bottomCircle]) {
       obj.setRotationFromEuler(new THREE.Euler(Math.PI / 2, 0, 0));
+    }
 
     cylinder.setClipPlanes!([new THREE.Plane(new THREE.Vector3(0, -1, 0), 1.4),
       new THREE.Plane(new THREE.Vector3(0, 1, 0), 1.4)]);
@@ -755,8 +755,9 @@ export function cylinderSurface($step: Step) {
       scene.camera.zoom = 1 - n / 250;
       scene.camera.updateProjectionMatrix();
 
-      if (!hasMoved) $solid.object.setRotationFromEuler(
-          new THREE.Euler(-n / 200, 0, 0));
+      if (!hasMoved) {
+        $solid.object.setRotationFromEuler(new THREE.Euler(-n / 200, 0, 0));
+      }
       scene.draw();
     }
 
@@ -897,8 +898,9 @@ export function coneSurface($step: Step) {
 
       scene.camera.zoom = 1.05 - n / 600;
       scene.camera.updateProjectionMatrix();
-      if (!hasMoved) $solid.object.setRotationFromEuler(
-          new THREE.Euler(-n / 250, 0, 0));
+      if (!hasMoved) {
+        $solid.object.setRotationFromEuler(new THREE.Euler(-n / 250, 0, 0));
+      }
 
       scene.draw();
     }

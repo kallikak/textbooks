@@ -5,9 +5,9 @@
 
 
 import {Obj} from '@mathigon/core';
-import {Point, nearlyEquals, Segment, isLineLike, isCircle, Circle} from '@mathigon/fermat';
+import {isLineLike, Point, Segment} from '@mathigon/fermat';
 import {$N, slide, SVGView} from '@mathigon/boost';
-import {Geopad, GeoPath, GeoPoint, GeoShape, Path, PlayBtn, Step, Video} from '../shared/types';
+import {Geopad, GeoPoint, Path, PlayBtn, Step, Video} from '../shared/types';
 
 
 export function thales($step: Step) {
@@ -54,8 +54,8 @@ export function congruence($step: Step) {
   const $groups = $svg.$$('.obj') as SVGView[];
   const centers = $groups.map($g => $g.center);
   const colours: Obj<string> = {
-    a: '#fd8c00', b: '#ea3620', c: '#6f27cc',
-    d: '#0f82f2', e: '#18aa93', f: '#22ab24'
+    a: '#fd8c00', b: '#eb4726', c: '#6d3bbf',
+    d: '#0f82f2', e: '#009ea6', f: '#22ab24'
   };
 
   let from: number|undefined = undefined;
@@ -148,7 +148,7 @@ export async function equilateral($step: Step) {
   // Draw the two circles
   const [c1, c2] = await $geopad.waitForPaths([
     `circle(${s0.name}.p1,distance(${s0.name}.p1,${s0.name}.p2))`,
-    `circle(${s0.name}.p2,distance(${s0.name}.p1,${s0.name}.p2))`,
+    `circle(${s0.name}.p2,distance(${s0.name}.p1,${s0.name}.p2))`
   ], drawingOptions);
 
   $step.score('circle1');
@@ -158,7 +158,7 @@ export async function equilateral($step: Step) {
   // Draw the two side segments
   const [s1, s2] = await $geopad.waitForPaths<Segment>([
     `segment(${s0.name}.p1,intersections(${c1.name},${c2.name})[0])`,
-    `segment(${s0.name}.p2,intersections(${c1.name},${c2.name})[0])`,
+    `segment(${s0.name}.p2,intersections(${c1.name},${c2.name})[0])`
   ], drawingOptions);
 
   s1.$el.setAttr('target', 'a');

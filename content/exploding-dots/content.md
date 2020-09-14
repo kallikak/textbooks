@@ -49,7 +49,7 @@ overtake it, the tortoise wins the race!
 
 ---
 
-    figure: x-media(src="images/mind-blown.gif" width=300 height=200)
+    figure: x-img(src="images/mind-blown.gif" alt="Mind Blown GIF" width=300 height=200)
 
 It seems obvious that something in our argument must have gone wrong. We clearly
 _know_ that Achilles would eventually overtake the tortoise. But it is
@@ -75,11 +75,11 @@ in the 15th century.
 {.r} There is one important property of numbers that we usually take for
 granted: all numbers are __unique__. In other words, there are no two different
 numbers that are equal. 5 and 8 are different, just like 100 is different from
-101, and so on. _{button.next-step} Continue_
+101, and so on. [Continue](btn:next)
 
 ::: column(width=300)
 
-    x-media(src="images/clock.jpg" width=300 height=300)
+    x-img(src="images/clock.jpg" alt="Clock" width=300 height=300)
 
 {.caption} On a clock, the number 12 (XII) is actually the same as the number 0.
 
@@ -92,7 +92,9 @@ numbers that are equal. 5 and 8 are different, just like 100 is different from
 Well – almost. Like for every rule, there might be some exceptions to this one.
 For example, here is one age-old question asked by students around the world:
 
-{.quote} __Is 0.999999… equal to 1?__
+::: blockquote
+Is 0.999999… equal to 1?
+:::
 
 The “…” means that there are _infinitely many_ 9s to the right of the decimal
 point. If the answer to this question is _yes_, it would mean that there are two
@@ -109,15 +111,16 @@ entire questions sounds a bit dubious. There is no way we could _actually write
 down_ infinitely many 9s – it would take infinitely long. We have to cheat by
 writing dots and using our imagination. The question should really be:
 
-{.quote(style="max-width: 480px; margin: 1.5em auto")} __If we were
-somehow God-like and could write an infinite string of 9s, would the results be
-equal to 1?__
+::: blockquote(style="max-width: 480px; margin: 1.5em auto")
+If we were somehow God-like and could write an infinite string of 9s, would
+the results be equal to 1?
+:::
 
 Since we humans are not God-like, you might decide that the question is
 meaningless. But that seems like a very unsatisfactory solution – and new
 discoveries always start by asking _“what if…”_
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: numberline
@@ -145,7 +148,7 @@ As humans, we can only ever write a finite number of 9s, say ${n}{n|1|1,15,1}:
         polygon(points="655 77 659.88 65.06 655 67.89 650.12 65.06 655 77")
     x-gesture(target="x-var" slide="100,0")
 
-{.convergence} **{.m-yellow}0.9** is less than 1.  
+{.convergence.no-voice} **{.m-yellow}0.9** is less than 1.  
 _{span.reveal(when="n2")} **{.m-green}0.99** is less than 1._  
 _{span.reveal(when="n3")} **{.m-blue}0.999** is less than 1._  
 _{span.reveal(when="n4")} **{.m-red}0.9999** is less than 1._  
@@ -270,7 +273,7 @@ Apparently, if we pulled out an infinite calculator and computed the sum of 9 +
 
 _Do you believe that?_
 
-    figure: x-media(src="images/confused.gif" width=200 height=200)
+    figure: x-img(src="images/confused.gif" alt="Confused GID" width=200 height=200)
 
 ---
 
@@ -303,9 +306,8 @@ there – and that is a perfectly valid view.
 This begs the question: is there an _unusual_ system of arithmetic for which
 …999999 is a meaningful number?
 
-::: .box.problem-box
-    .box-title: h3 Challenge
-::: .box-body
+::: .box.f-blue
+#### Challenge
 
 Let’s make matters worse! Consider the number with infinitely many 9s both to
 the left _and_ to the right of the decimal point: __{.m-red.nowrap}…9999.9999…__.
@@ -316,9 +318,8 @@ __{.m-green.nowrap}…9999__ + __{.m-yellow.nowrap}0.9999…__ = __{.m-green}−
 __{.m-yellow}1__ = __{.m-red}0__.*
 
 :::
-:::
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: warp-1
@@ -335,7 +336,7 @@ abstruse to think that _{span.nowrap}…999999_ could possibly equal –1.
 
     figure: include svg/number-line-1.svg
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: warp-2
@@ -359,7 +360,7 @@ and __division__.
 be divided any number of times by any integer, and still give an integer result
 (namely 0). If we focus on our number base of 10, we can see that 0 can be
 divided by 10 once, or twice, or thirty-seven times, or a million times.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: zero-list
@@ -370,7 +371,7 @@ _{button.next-step} Continue_
   times|four times]] by 10, and still give an integer result.
 * {.reveal(when="blank-0")} The number __230,000__ is even more zero-like. It
   can be divided [[four]] times by 10, and still stay an integer.
-* {.reveal(when="blank-1")} The number __5__, on the other hand, it not very
+* {.reveal(when="blank-1")} The number __5__, on the other hand, is not very
   zero-like. We can’t divide it by ten even once, and have it stay an integer.
 
 ---
@@ -379,15 +380,15 @@ We can now develop a __distance formula__, based on how often 10 “goes into”
 into a number multiplicatively. If we can divide a number _a_ by ten a maximum
 of _k_ times while remaining an integer, let’s write
 
-{.text-center} `|a|_(ten) = 1/10^k`
+{.text-center} `abs(a)_(ten) = 1/10^k`
 
-For example, `|850|_(ten) = 1/(10^1) = 0.1`, and `|8500|_(ten) = 1/(10^2) = 0.01`,
-and `|850000|_(ten) =` [[0.0001]].
+For example, `abs(850)_(ten) = 1/(10^1) = 0.1`, and `abs(8500)_(ten) = 1/(10^2) = 0.01`,
+and `abs(850000)_(ten) =` [[0.0001]].
 
 ---
 
 We can also measure the distance between any two different numbers. For example,
-the distance between 3 and 33 is `|33−3|_(ten) = |30|_(ten) = 1/(10^1) = 0.1`.
+the distance between 3 and 33 is `abs(33−3)_(ten) = abs(30)_(ten) = 1/(10^1) = 0.1`.
 
 With this new way to measure distance, 1, 10, 100, 1000, … is a sequence of
 numbers getting closer and closer to [[zero|1|–1|infinity]]. Similarly, 9, 99,
@@ -440,15 +441,13 @@ know that _{span.nowrap}…6666667_ = `1/3`.*
 
 ---
 
-::: .box.problem-box
-    .box-title: h3 Challenge
-::: .box-body
+::: .box.f-blue
+#### Challenge
 
 Can you work out which ten-adic number behaves like `2/3`?
 
 What about other fractions like `4/7` or `2/13`?
 
-:::
 :::
 
 _It turns out that there are a few fractions that cannot be expressed in our
@@ -497,10 +496,9 @@ To see why that’s the case, we need to look at the powers of 2 and 5:
 ---
 > id: flaw-1
 
-Notice how many of the powers of 5 end in <x-target to=".po2" no-margins>other,
-smaller powers of 5</x-target>. The same is also true for powers of 2. It turns
-out that we can create two infinite, 10-adic numbers, that always end in powers
-of 2 or 5 respectively:
+Notice how many of the powers of 5 end in [{.no-margins}other, smaller powers of 5](->.po2). The
+same is also true for powers of 2. It turns out that we can create two infinite, 10-adic numbers,
+that always end in powers of 2 or 5 respectively:
 
 ::: column(width=140)
 
@@ -518,7 +516,7 @@ __{.i.m-yellow}N__ = …1953125
 
 :::
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: flaw-2
@@ -610,7 +608,7 @@ into any [[even|odd|prime]] number of equal triangles.
 
 {.r.reveal(when="blank-0")} But what about _odd_ numbers? Draw a square on a
 sheet of paper, and then try dividing it into 3, 5 or 7 triangles of equal area.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: square-3
@@ -621,7 +619,7 @@ mathematician [Paul Monsky](bio:monsky) – you can even have a look at the pape
 he published about it:
 
     figure
-      x-media(src="images/paper.jpg" width=400 height=132)
+      x-img(src="images/paper.jpg" alt="Paper by Paul Monsky" width=400 height=132)
       p.caption #[a(href="http://ieee.scripts.mit.edu/urgewiki/images/0/00/Monsky.pdf" target="_blank") The American Mathematical Monthly]
 
 In the proof, Monsky had to use the 2-adic number system. Mathematics, no matter

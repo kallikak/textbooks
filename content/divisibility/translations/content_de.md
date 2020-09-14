@@ -62,18 +62,21 @@ von __{.green}7__ - kurz: __{.green}7__|__{.orange}21__.
 In diesem kurzen Spiel sollst du
 so schnell wie möglich bestimmen, welche Zahlen Teiler oder Vielfache sind. Klicke auf den [Startknopf](->#divisibility-game_.toggle), um zu beginnen.
 
-    .box.problem-box
-      .box-title: h3 Teiler und Vielfache Quiz
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | ist
-          .factor-value
-            .factor-bubble: .btn.btn-blue Teiler
-            .factor-bubble: .btn.btn-blue Vielfaches
-            .factor-bubble: .btn.btn-blue Keines
-          | von
-          .factor-number ${y}
+::: .box.f-blue.no-padding
+#### Teiler und Vielfache Quiz
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | ist
+        .factor-value
+          .factor-bubble: .btn.btn-blue Teiler
+          .factor-bubble: .btn.btn-blue Vielfaches
+          .factor-bubble: .btn.btn-blue Keines
+        | von
+        .factor-number ${y}
+
+:::
 
 ---
 > id: factors
@@ -112,8 +115,6 @@ bis wir in der Mitte angelangt sind.
 Der einzige Sonderfall bei dieser Methode sind Quadratzahlen: In diesem Fall ist zum Schluss
 nur eine einzige Zahl in der Mitte, wie bei 64 = 8 × 8.
 
-    //- TODO Factorisation exercises
-
 ---
 
 ## Teilbarkeitsregeln
@@ -124,7 +125,6 @@ nur eine einzige Zahl in der Mitte, wie bei 64 = 8 × 8.
 Es gibt ein paar verschiedene Regeln, die es dir überraschend einfach machen können, zu überprüfen, ob eine
 Zahl durch eine andere teilbar ist. In diesem Abschnitt werden wir einen Blick auf einige von
 ihnen werfen....
-
 
 ### Teilbarkeit durch 2 und 5
 
@@ -279,10 +279,9 @@ immer durch 3 (oder durch 9) teilbar. Es bleibt nur noch zu prüfen, ob das, was
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-Das ist zufällig die Quersumme! Wenn also die <x-target no-margins
-to=".digit-sum-is">Quersumme</x-target> ein Vielfaches von 3 ist, und wir
-wissen, dass <x-target no-margins to=".digit-sum-else">alles andere</x-target>
-ein Vielfaches von 3 ist, dann muss das Ergebnis auch ein Vielfaches von 3 sein.
+Das ist zufällig die Quersumme! Wenn also die [{.no-margins}Quersumme](->.digit-sum-is) ein
+Vielfaches von 3 ist, und wir wissen, dass [{.no-margins}alles andere](->.digit-sum-else) ein
+Vielfaches von 3 ist, dann muss das Ergebnis auch ein Vielfaches von 3 sein.
 
 ---
 > id: divisibility6
@@ -303,8 +302,6 @@ teilbar ist. Beachte, dass dies
 zwar für 6 funktioniert, aber sicherlich nicht für _jede_ Zahl, die das Produkt von zwei anderen ist.
 Mehr dazu später....
 
-    //- TODO Practice exercises
-
 ---
 
 ## Primzahlen
@@ -320,8 +317,6 @@ gewissermaßen zu “Atomen von Zahlen” macht.
 
 Beachte, dass 1 selbst _keine_ Primzahl ist, so dass die ersten Primzahlen
 2, 3, 5, 7, 11, 13,.... sind.
-
-    //- TODO Exercises
 
 ---
 > id: primes1
@@ -374,8 +369,6 @@ Zahlen in ihre Primfaktoren auf, dann lösen wir das Problem für die einzelnen
 Primzahlen, was oft viel einfacher sein kann, kombinieren zum Schluss diese Ergebnisse und
 lösen so das anfängliche Problem.
 
-    //- TODO Exercises
-
 ---
 > id: eratosthenes
 
@@ -418,7 +411,7 @@ als erster, dass es unendlich viele Primzahlen gibt, mit dem folgenden Argument:
 
 ::: column(width=220)
 
-    x-media(lightbox width=220 height=300 src="images/euclid.jpg")
+    x-img(lightbox width=220 height=300 src="images/euclid.jpg")
 
 :::
 
@@ -434,10 +427,6 @@ als erster, dass es unendlich viele Primzahlen gibt, mit dem folgenden Argument:
         .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
       li In beiden Fällen hätten wir also eine neue Primzahl gefunden, die nicht in unserer ursprünglichen Liste enthalten ist - aber wir hatten ja angenommen, dass #[em alle] Primzahlen in dieser Liste sind.
       li Offensichtlich ist da etwas schiefgelaufen! Aber da die Schritte #[span.proof-step 2]-#[span.proof-step 4] alle korrekt waren, ist die einzige mögliche Erklärung die, dass unsere anfängliche Annahme #[span.proof-step 1] falsch war. Das bedeutet, dass es tatsächlich unendlich viele Primzahlen geben muss.
-
-    // Beachte, dass jede Primzahl, die N teilt, N + 1 nicht teilen kann. (Wenn es so wäre, müsste
-    // sie auch die Differenz zwischen N und N + 1 teilen, die aber 1 ist. Aber
-    // die einzige Zahl, die 1 teilt, ist 1 selbst.)
 
 ---
 > id: primes4
@@ -467,7 +456,7 @@ Hier ist ein Taschenrechner, mit dem du überprüfen kannst, ob eine Zahl eine P
     .calculator
       h3 Primzahl-Checker
       input(type="number" min="2")
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: prime-test-1
@@ -500,18 +489,17 @@ Die Berechnung dieser großen Primzahlen mag wie Zeitverschwendung erscheinen, a
 später in diesem Kurs wirst du mehr über verschiedene reale Anwendungen erfahren, bei denen
 Computer große Primzahlen verwenden müssen.
 
-Hier kannst du deine eigenen Primzahlen mit einer gegebenen Anzahl von Ziffern generieren:
+Hier kannst du deine eigenen Primzahlen mit einer gegebenen Anzahl von Ziffern generieren
+(beachte, dass die Kommas im Ergebnis im englischsprachigen Raum Tausendertrennzeichen sind):
 
     .calculator
       h3 Primzahlgenerator
       p.md Anzahl an Ziffern: ${d}{d|6|2,16,1}
       p(style="margin: 10px 0"): button.btn.btn-white Generate
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: ulam
-
-    //- Auf einem wissenschaftlichen Treffen 1963 kritzelte Stanislaw M. Ulam während der Präsentation einer "langen und sehr langweiligen Arbeit" herum.
 
 ### Die Ulam-Spirale
 
@@ -557,7 +545,7 @@ nicht bekannt, was der genaue Hintergrund dafür sein sollte...._
 
 ::: column(width=200)
 
-    x-media(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
+    x-img(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
 
 {.caption} Titelbild der März-Ausgabe 1964 von Scientific American
 :::
@@ -578,7 +566,7 @@ definiert - und sollten nicht viel mit Addition zu tun haben.
       h3 Goldbach Rechner
       p Wähle eine beliebige gerade Zahl, um zu berechnen, wie#[br]sie als Summe zweier Primzahlen geschrieben werden kann.
       input(type="number", min=4, step=2)
-      p.result.var ${result}
+      .result.var(:html="result")
 
 Goldbach schrieb über seine Beobachtung in einem Brief an den berühmten Mathematiker
 [Leonhard Euler](bio:euler), aber keiner von ihnen konnte sie beweisen. So wurde
@@ -850,8 +838,6 @@ Ein Sonderfall sind Primzahlen: Das kgV von zwei verschiedenen Primzahlen ist ei
 [[ihr Produkt|ihre Summe|ihre Differenz]], da sie keine gemeinsamen
 Primfaktoren haben, die “gestrichen” werden würden.
 
-    //- TODO Exercises
-
 ---
 > id: cicadas
 > goals: bound-low bound-high
@@ -868,7 +854,7 @@ Zikaden in Illinois und Iowa erscheinen nur alle 17 Jahre. Aber es gibt keine
 Zikaden mit Jahreszyklen von 12, 14, 15 oder 16 Jahren.
 ::: column(width=360)
 
-    x-media(width=360 height=240 src="images/cicadas.jpg")
+    x-img(width=360 height=240 src="images/cicadas.jpg")
 
 :::
 
@@ -894,8 +880,6 @@ bei der Berechnung des kgV keine doppelten Teiler zu löschen haben.
 Natürlich haben die Zikaden keine Ahnung, was Primzahlen sind - aber in Millionen von
 Jahren hat die Evolution herausgefunden, dass Primzahlen für sie am sichersten sind. Das Raubtier
 scheint im Laufe der Zeit ausgestorben zu sein, aber die Primzahlzyklen wurden beibehalten.
-
-    //- TODO Exercises
 
 ---
 
@@ -995,7 +979,7 @@ vom Mathematiker Alan Turing, baute einige der ersten Computer, die es schafften
 entschlüsseln.
 ::: column(width=240)
 
-    x-media(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
+    x-img(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
     p.caption Deutsche Enigma-Maschine mit 4 Walzen
 
 :::

@@ -12,7 +12,7 @@ Bugün yukarıdan fotoğraf çekebilecek uydularımız var  – fakat 200 yıl �
 
 ::: column(width=240)
 
-    x-media.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
+    x-img.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
 
 {.caption} _Teodolit_, bir ölçüm aracı
 :::
@@ -37,7 +37,7 @@ _{button.next-step} Devam_
 
 ::: column(width=320)
 
-    x-media(src="images/hillary.jpg" width=320 height=190)
+    x-img(src="images/hillary.jpg" width=320 height=190)
 
 {.caption} Edmund Hillary ve Tenzing Norgay, 1953’te Everest Dağı’nın tepesine çıkan ilk insanlar olmayı başarmışlardı.
 
@@ -61,15 +61,15 @@ Bu derste üçgenlerin pek çok farklı özelliklerini öğreneceksiniz. Bu, da�
 Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle kullanışlı yapar.
 
 ::: column(width=200)
-    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
+    x-img(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
 
 {.caption} ‘Kirişli köprü’, üçgen barlarla desteklenir.
 ::: column(width=200)
-    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
+    x-img(src="images/pylon.jpg" width=200 height=200 lightbox)
 
 {.caption} Yüksek-voltajlı elektrik direğinde üçgenler
 ::: column(width=200)
-    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
+    x-img(src="images/bike.jpg" width=200 height=200 lightbox)
 
 {.caption} Bisikletler bile denge için üçgenleri kullanır.
 :::
@@ -81,15 +81,15 @@ Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle 
 Üçgenler ayrıca en az kenara sahip en basit çokgenlerdir. Bu onları karmaşık eğrisel yüzeylere yaklaşmak için özellikle uygun hale getirir. Bu fiziksel yapılarda kullanılır…
 
 ::: column(width=200)
-    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} “The Gherkin”, Londra’da bir gökdelen
 ::: column(width=200)
-    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Hong Kong’ta Çin Bankası Kulesi
 ::: column(width=200)
-    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Londra’da British Müzesi’nin avlusu
 :::
@@ -98,11 +98,10 @@ Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle 
 ...ayrıca görsel dünyada da. Bilgisayar tarafından oluşturulan grafiklerde (örneğin video oyunları veya filmler için), tüm yüzeylere çok küçük üçgen “kafesler” kullanılarak yaklaşılmaktadır.
 Sanatçılar ve yazılım mühendisleri, bu üçgenleri gerçekçi bir şekilde hareket ettirebilmek ve renklerini ve yapılarını hesaplayabilmek için, geometri ve trigonometri hakkında bilgi sahibi olmalıdır.
 ::: column(width=220)
-    x-media(src="images/dolphin.jpg" width=220 height=135)
+    x-img(src="images/dolphin.jpg" width=220 height=135)
 :::
 
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
+    figure: x-video(src="https://storage.googleapis.com/mathigon-videos/tiger.mp4" poster="images/tiger.jpg" width=480 height=270 credit="© UCTV, The STEAM Channel")
 
 ---
 
@@ -217,26 +216,9 @@ Bir kartona bir üçgen çizin, kesip çıkarın ve üç medyanı da bulun. Eğe
 
     figure: img(src="images/center-of-mass.jpg" width=600 height=190)
 
-::: column.grow
 Bunun olmasının sebebi ağırlığın bu merkez etrafında dağılmış olmasıdır. Fizikte de bu noktaya __ağırlık merkezi__ denmektedir.
 
 Ağırlık merkezinden geçen bir doğru üçgeni alanları birbirlerine eşit olan iki parçaya ayırır. Sağdaki animasyonda [mavi noktayı](target:move) hareket ettirin. Kırmızı ve yeşil bölgelerin alanları birbirlerine eşit olacaktır.
-::: column(width=220)
-
-    x-geopad(width=220): svg
-      circle.move(name="a" cx=70 cy=50)
-      circle.move(name="b" cx=60 cy=160)
-      circle.move(name="c" cx=180 cy=130)
-      circle.yellow(x="triangle(a,b,c).centroid" name="d")
-      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
-      circle(hidden name="q" x="p.rotate(pi,d)")
-
-      path.dark(x="triangle(a,b,c)" name="t")
-      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
-      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
-      path.blue(x="line(p,d)")
-
-:::
 
 ---
 > id: circumcircle
@@ -685,10 +667,6 @@ Burada __{.m-red}6m__ uzunluğunda duvara yaslanmış bir merdiven görüyorsunu
 
 Merdiven, duvar ve yerin bir dik üçgen oluşturduğunu fark edelim. Pisagor Teoremi’ni kullanarak şunu elde ederiz:
 
-    //- Ideal syntax:
-    //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
-    //- |          `=> green(h^2)` | `= blank(35)`       |
-    //- |            `=> green(h)` | `= sqrt(35) = 5.92` |
     
     table.eqn-system
       tr
@@ -781,10 +759,6 @@ Büyük karenin bir kenarı `a + b` uzunluğunda ve alanı
 
 {.reveal(when="blank-3 blank-4")} Eğer tüm bu bilgileri kullanacak olursak, şuna ulaşırız
 
-    //- Ideal syntax:
-    //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
-    //- | `a^2 + 2ab + b^2` | `= 2ab + c^2`        |
-    //- |       `a^2 + b^2` | `= c^2`              |
 
     table.eqn-system.reveal(when="blank-3 blank-4")
       tr
@@ -907,7 +881,7 @@ Pisagor’un hayatıyla ilgili çok az şey bilinir ve çalışmalarının oriji
 ::: column.grow
 Pisagorcular, ilk kez bir [irrasyonel sayı](gloss:irrational-numbers) , `sqrt(2)` , bulmak da dahil bir çok matematiksel keşifle tanınırlar. İrrasyonel sayılar basit bir kesir olarak ifade edilemezler – Pisagorcuları derinden sarsan ve (başarısız bir şekilde) örtbas etmeye çalıştıkları bir kavram!
 ::: column(width=400)
-    x-media(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
+    x-img(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
 {.caption} “Pisagorcular güneşin doğuşunu kutluyor” Fyodor Bronnikov
 :::
@@ -1006,12 +980,6 @@ Bu üçlüleri, koordinat sisteminde karelaj noktaları olarak düşünebiliriz.
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Bu noktaların dağılmasında herhangi bir yöntem farkettiniz mi?
 
-    // The mathematician Euclid found a clever method for generating new
-    // Pythagorean triples. First, we need to pick any two integers _m_ and _n_:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
-    // Now we can calculate the three numbers that make up the triple:
-    // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
-    // And there you have your pythagorean triple! You can check that a2 + b2 = c2.
 
 ----
 
@@ -1035,27 +1003,6 @@ Proof by constructing angle bisector and using SAS result.
 
 {.todo} COMING SOON – Find the height of an Isosceles Triangles using Pythagoras
 
-    // {.todo} The angles between the base and the congruent sides are
-    // called base angles. The angle made by the two legs of the isosceles triangle is
-    // called the vertex angle.
-    // 
-    // {.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
-    // To prove the Base Angles Theorem, we will construct the angle bisector through
-    // the vertex angle of an isosceles triangle.
-    // 
-    // {.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
-    // isosceles triangle is also the perpendicular bisector to the base.
-    // 
-    // {.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
-    // both true. If two angles in a triangle are congruent, then
-    // the opposite sides are also congruent. And if the perpendicular bisector of the base of
-    // an isosceles triangle is also the angle bisector of the vertex angle.
-    // 
-    // {.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-    // 
-    // {.todo} Find the Height of an Isosceles Triangle
-    // One way to use The Pythagorean Theorem is to identify the heights in isosceles
-    // triangles so you can calculate the area.
 
 ---
 > id: equilateral
@@ -1067,13 +1014,6 @@ its sides  have the same length. You’ve [already
 seen](/course/euclidean-geometry/geometric-construction) how to construct an
 equilateral triangle using straight-edge and compass.
 
-    // Any equilateral triangle is always also isosceles. From the base angle theorem
-    // we know that angles opposite congruent sides in a triangle are also congruent.
-    // In an equilateral triangle, all of the sides are congruent, so all of the angles
-    // must also be congruent.
-    // 
-    // Since we know that the sum of all three angles is 180°, every individual angle
-    // in an equilateral triangle must be [[60]]°.
 
 {.todo} COMING SOON – Size of angles in an equilateral triangle
 
@@ -1193,10 +1133,6 @@ Bu üç Trigonometrik fonksiyon, dik açılı üçgenlerin kenarlarının oranla
 
 {.todo} YAKINDA – Trigonometri üzerine daha fazla
 
-    // {.todo} COMING SOON – Abbreviations: sin x, cos y
-    // {.todo} COMING SOON – Using calculators
-    // {.todo} COMING SOON – Examples
-    // {.todo} COMING SOON – Rationalize the denominator
 
 ---
 > id: inverse-trig
@@ -1205,19 +1141,7 @@ Bu üç Trigonometrik fonksiyon, dik açılı üçgenlerin kenarlarının oranla
 
 {.todo} YAKINDA – Ters Fonksiyonlar
 
-    // The word inverse is probably familiar to you. In mathematics, once you learn how
-    // to do an operation, you also learn how to “undo” it. For example, you may
-    // remember that addition and subtraction are considered inverse operations.
-    // Multiplication and division are also inverse operations. In algebra you used
-    // inverse operations to solve equations and inequalities. When we apply the word
-    // inverse to the trigonometric ratios, we can find the acute angle measures within
-    // a right triangle. Normally, if you are given an angle and a side of a right
-    // triangle, you can find the other two sides, using sine, cosine or tangent. With
-    // the inverse trig ratios, you can find the angle measure, given two sides.
 
-    // On most scientific and graphing calculators, the buttons look like
-    // [SIN−1],[COS−1], and [TAN−1]. Typically, you might have to hit a shift
-    // button to access these functions.
 
 ---
 
@@ -1236,9 +1160,6 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
 :::
 
-    // {.todo} Use Law of Sines when given:
-    // An angle and its opposite side.
-    // Any two angles and one side.
 
 ::: column.grow
 ::: .theorem
@@ -1250,13 +1171,6 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-    // {.todo} Even though there are three formulas, they are all very similar. First, notice
-    // that whatever angle is in the cosine, the opposite side is on the other side of
-    // the equal sign.
-    // 
-    // {.todo} Use Law of Cosines when given:
-    // Two sides and the included angle.
-    // All three sides.
 :::
 
 ---
@@ -1264,7 +1178,6 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 
 {.todo} YAKINDA – Kanıt, örnek ve uygulamalar
 
-    // TODO Future stuff about trigonometry
 
 ---
 > id: mountains
@@ -1371,4 +1284,4 @@ _{span.pill.step-target.green(data-to="a")} α açısının_ bir [bütünler aç
 
 Bu açıklama Büyük Trigonometrik Araştırma üzerinde çalışan matematikçiler ve coğrafyacılar tarafından yapılan olağanüstü çalışmaları büyük ölçüde kolaylaştırmaktadır. Deniz seviyesinden başladılar, binlerce kilometre mesafedeki uzaklıkları ölçtüler, tüm ülke genelinde araştırma kuleleri inşa ettiler ve hatta Dünya’nın eğriliğini bile hesapladılar.
 
-    figure: x-media(src="images/himalaya.jpg" width=760 height=320)
+    figure: x-img(src="images/himalaya.jpg" width=760 height=320)

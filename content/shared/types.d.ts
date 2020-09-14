@@ -474,13 +474,17 @@ export abstract class GeoShape<T extends Point|Path = Point|Path> extends EventT
   readonly $parent: Geopad;
   $el: SVGView;
   name: string;
-  locked: boolean;
+  color: string;
+  label: string;
   isPending: boolean;
+  isLocked: boolean;
   components: GeoPoint[];
   protected $label?: ElementView;
   protected constructor($parent: Geopad, initial: GeoValue<T>, $el: SVGView, id?: string);
   get value(): T|undefined;
   get type(): string|undefined;
+  get locked(): boolean;
+  get isHidden(): boolean;
   setValue(p: GeoValue<T>): void;
   setLabel(str: string, color?: string, position?: string): void;
   select(): void;
@@ -612,4 +616,56 @@ export class Course extends CustomElementView {
   findStep(id: string): Step|undefined;
   saveProgress(data: Obj<any>): void;
   log(category: string, action: string, value?: string): void;
+}
+
+export abstract class Tile {
+    readonly $parent: Polypad;
+    readonly type: string;
+    readonly usePosnAsRotationCenter: boolean;
+    options?: string;
+    $el: SVGView;
+    isActive: boolean;
+    colour: string;
+    posn: Point;
+    rot: number;
+    protected path: Polygon | Rectangle;
+    protected $body: SVGView;
+    protected anchor: Point;
+    protected vertices: never[];
+    protected radius: number;
+    constructor($parent: Polypad);
+    setPosition(posn: Point, snap?: boolean): Point;
+    setRotation(rot: number): void;
+    setColour(colour: string): void;
+    transform(): void;
+    static makeThumbnail(options: string, element: ElementView): void;
+    get outline(): Polygon;
+    get points(): Point[];
+    delete(): void;
+    copy(dx?: number, dy?: number): any;
+    static action(name: string, selectedTiles: Tile[]): void;
+}
+
+type PolypadTile = 'polygon'|'tangram'|'pentomino'|'fraction-bar'|'number-tile'|'number-bar'|'algebra-tile';
+
+export class Polypad extends CustomElementView {
+    tiles: Set<Tile>;
+    $svg: SVGParentView;
+    $tiles: ElementView;
+    $activeTiles: ElementView;
+    $selection: SVGView;
+    $strokes: ElementView;
+    $grid: ElementView;
+    canDelete: boolean;
+    canCopy: boolean;
+    ready(): void;
+    newTile(type: PolypadTile, options: string): Tile;
+    selectRect(start: Point, end: Point): void;
+    snap(...points: Point[]): Point | undefined;
+    bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView): void;
+    setColour(c?: string): void;
+    setGrid(option: 'none'|'square-dots'|'square-grid'|'tri-dots'|'tri-grid'): void;
+    setActiveTool(tool: 'move'|'pen'|'eraser'): void;
+    toggleProtractor(): void;
+    clear(): void;
 }

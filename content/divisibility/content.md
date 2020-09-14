@@ -34,10 +34,27 @@
               td(colspan=i)
 
 By now you should be comfortable with addition, subtraction and multiplication
-of integers. Division is slightly different, because you can’t always divide any
+of integers. Division is slightly different, because you can’t always divide any
 integer by any other. For example 17 divided by 3 is not a whole number – it is
 somewhere in between 5 and 6. You either have to give a remainder (2), or
 express the answer as a decimal number (5.66…).
+
+    // figure
+      x-factor-diagram.var(:n="n + 1")
+      x-slider(steps=99 :bind="n")
+    // - var i = 2
+    // while i <= 50
+      x-prime-disk(n=i size=60)
+      - i += 1
+    // - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
+    // - total = (a) => a.reduce((a, c) => a + c, 0)
+    
+    // .factor-table
+      for i in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        div
+          span.bulb= i
+          span.factors= factors(i).join(', ')
+          span.total= total(factors(i))
 
     .row.padded
       .grow
@@ -62,18 +79,21 @@ of __{.green}7__, and we can write __{.green}7__|__{.orange}21__.
 In this short game you have to determine which numbers are factors or multiples,
 as fast as possible. Click the [play button](->#divisibility-game_.toggle) to start.
 
-    .box.problem-box
-      .box-title: h3 Factors and Multiples Quiz
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | is a
-          .factor-value
-            .factor-bubble: .btn.btn-blue factor
-            .factor-bubble: .btn.btn-blue multiple
-            .factor-bubble: .btn.btn-blue neither
-          | of
-          .factor-number ${y}
+::: .box.f-blue.no-padding
+#### Factors and Multiples Quiz
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | is a
+        .factor-value
+          .factor-bubble: .btn.btn-blue factor
+          .factor-bubble: .btn.btn-blue multiple
+          .factor-bubble: .btn.btn-blue neither
+        | of
+        .factor-number ${y}
+
+:::
 
 ---
 > id: factors
@@ -236,7 +256,7 @@ is [[14]].
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
 Here we’ve highlighted all numbers which are multiples of three. You can see
-that their digit sums are always [[a multiple of 3|either 0 or 3|odd numbers]].
+that their digit sums are always [[a multiple of 3|either 0 or 3|odd numbers]].
 
 {.reveal(when="blank-0")} So to determine if any number is divisible by 3, you
 just have to calculate its digit sum, and check if the result is also divisible
@@ -279,10 +299,9 @@ over is also divisible by 3 (or 9):
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-This just happens to be the digit sum! So if the <x-target no-margins
-to=".digit-sum-is">digit sum</x-target> is a multiple of 3, and we
-know that <x-target no-margins to=".digit-sum-else">everything else</x-target>
-is a multiple of 3, then the result must also be a multiple of 3.
+This just happens to be the digit sum! So if the [{.no-margins}digit sum](->.digit-sum-is) is a
+multiple of 3, and we know that [{.no-margins}everything else](->.digit-sum-else) is a multiple of
+3, then the result must also be a multiple of 3.
 
 ---
 > id: divisibility6
@@ -294,7 +313,7 @@ We’ve still skipped number 6 – but we’ve already done all the hard work.
 Remember that 6 = 2 × 3.
 
     +grid(40)
-    p.btn-row.text-center(style="margin-bottom:1em")
+    p.btn-row.text-center.no-voice(style="margin-bottom:1em")
       button.btn.btn-small(data-display="visibility") Show multiple of 2
       button.btn.btn-small(data-display="visibility") Show multiple of 3
 
@@ -417,7 +436,7 @@ The ancient Greek mathematician [Euclid of Alexandria](bio:euclid) first proved
 that there are infinitely many prime numbers, using the following argument:
 ::: column(width=220)
 
-    x-media(lightbox width=220 height=300 src="images/euclid.jpg")
+    x-img(lightbox width=220 height=300 src="images/euclid.jpg" alt="Euclid of Alexandria Portrait")
 
 :::
 
@@ -466,7 +485,7 @@ Here is a calculator that allows you to check if any number is prime:
     .calculator
       h3 Prime Checker
       input(type="number" min="2")
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: prime-test-1
@@ -503,9 +522,9 @@ Here you can generate your own prime numbers with a given number of digits:
 
     .calculator
       h3 Prime Generator
-      p.md Number of digits: ${d}{d|6|2,16,1}
-      p(style="margin: 10px 0"): button.btn.btn-white Generate
-      p.result.var ${result}
+      p.no-voice.md Number of digits: ${d}{d|6|2,16,1}
+      p.no-voice(style="margin: 10px 0"): button.btn.btn-white Generate
+      .result.var(:html="result")
 
 ---
 > id: ulam
@@ -555,7 +574,7 @@ equations which seem to generate prime numbers more often than average. However
 it is unknown why that would be the case…_
 ::: column(width=200)
 
-    x-media(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
+    x-img(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg" alt="Scientific American Magazine Cover")
 
 {.caption} Cover of the March 1964 issue of Scientific American
 :::
@@ -574,9 +593,9 @@ is quite surprising, because primes are defined using multiplication and factors
 
     .calculator
       h3 Goldbach Calculator
-      p Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
+      p.no-voice Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
       input(type="number", min=4, step=2)
-      p.result.var ${result}
+      .result.var(:html="result")
 
 Goldbach wrote about his observation in a letter to the famous mathematician
 [Leonhard Euler](bio:euler), but neither of them was able to prove it. It became
@@ -706,10 +725,11 @@ the start line, when will they meet again at the start?
 This question really isn’t about the geometry of the race track, or about
 velocity and speed – it is about multiples and divisibility.
 
-The first runner crosses the start line after 60s, 120s, 180s, 240s, and so on.
-These are simply the [[multiples|factors]] of __{.m-blue}60__. The second runner
-crosses the start line after 40s, 80s, 120s, 160s, and so on. The first time
-both runners are back at the start line is after [[120]] seconds.
+The first runner crosses the start line after 60 seconds, 120 seconds, 180 seconds, 240 seconds,
+and so on. These are simply the [[multiples|factors]] of __{.m-blue}60__. The second runner crosses
+the start line after 40 _{span(voice="seconds")}s_, 80 _{span(voice="seconds")}s_, 120
+_{span(voice="seconds")}s_, 160 _{span(voice="seconds")}s_, and so on. The first time both runners
+are back at the start line is after [[120]] seconds.
 
 {.reveal(when="blank-0 blank-1")} What we’ve just found is the smallest number
 which is both a multiple of __{.m-green}40__ and a multiple of __{.m-blue}60__.
@@ -866,7 +886,7 @@ cicadas in Illinois and Iowa only appear every 17 years. But there are no
 cicadas with 12, 14, 15 or 16 year cycles.
 ::: column(width=360)
 
-    x-media(width=360 height=240 src="images/cicadas.jpg")
+    x-img(width=360 height=240 src="images/cicadas.jpg" alt="Cicadas")
 
 :::
 
@@ -908,7 +928,7 @@ along the sides. What is the largest size of squares she can use?
 
     figure
       include svg/floorplan.svg
-      p.text-center.md The tiles have a size of ${x}{x|3|1,18,1}m.#[br]#[span.result.var]
+      p.text-center.md The tiles have a size of ${x}{x|3|1,18,1}m.#[br]#[span.result.var.no-voice]
 
 ---
 > id: gcd1
@@ -993,7 +1013,7 @@ by mathematician Alan Turing, built some of the first computers that managed to
 decode it.
 ::: column(width=240)
 
-    x-media(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
+    x-img(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg" alt="Enigma Machine")
     p.caption German four-rotor Enigma machine
 
 :::

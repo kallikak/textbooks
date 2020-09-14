@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 ::: column.grow
 
@@ -19,22 +20,22 @@ La __théorie des graphes__ est l'étude des graphes et de leurs propriétés. C
 
     x-gallery(slide-width="300")
       div
-        x-media(src="images/network1.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network1.jpg" width=260 height=260 lightbox)
         p.caption Réseaux routiers et ferroviaires
       div
-        x-media(src="images/network6.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network6.jpg" width=260 height=260 lightbox)
         p.caption Circuits intégrés
       div
-        x-media(src="images/network3.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network3.jpg" width=260 height=260 lightbox)
         p.caption Des chaînes d'approvisionnement
       div
-        x-media(src="images/network2.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network2.jpg" width=260 height=260 lightbox)
         p.caption Amitiés
       div
-        x-media(src="images/network7.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network7.jpg" width=260 height=260 lightbox)
         p.caption Connexions neuronales
       div
-        x-media(src="images/network4.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network4.jpg" width=260 height=260 lightbox)
         p.caption L'Internet
 
 ---
@@ -136,6 +137,7 @@ Les graphes constitués d'une seule chaîne de sommets sont appelés [__cycles__
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Les ponts de Königsberg
 
@@ -165,25 +167,25 @@ Essayez de trouver un itinéraire valide en dessinant sur ces cartes:
         x-solved
         include svg/bridges-1.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
       .tab
         h3 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
 
 ---
 
@@ -209,9 +211,6 @@ Premièrement, nous devons convertir les cartes de la ville en graphes avec des 
 
 Sur papier, imaginez quelques graphes différents, puis essayez de déterminer lesquels peuvent être dessinés avec un seul trait continu.
 
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
-
 ---
 
 > id: bridges-3
@@ -219,16 +218,17 @@ Sur papier, imaginez quelques graphes différents, puis essayez de déterminer l
 
 Tout comme pour les cartes de villes précédentes, nous constatons que certains graphes sont possibles, d'autres non. Pour nous aider à comprendre pourquoi, étiquetons chaque sommet avec son [degré](gloss:graph-degree):
 
-    .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong Ces graphes sont possibles :
-      include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong Ces graphes ne sont pas possibles :
-      include svg/vertex-orders-2.svg
-      p: select
-        option(value="val", selected) Colorier par valeur
-        option(value="size") Colorier par petit et grand
-        option(value="prime") Colorier par primalité
-        option(value="eo") Colorier par parité
+    figure
+      x-select.var.tabs(:bind="colour")
+        div(value="val") Valeur
+        div(value="size") Petit et grand
+        div(value="prime") Primalité
+        div(value="eo") Parité
+      .box
+        p(style="margin: 0"): strong Ces graphes sont possibles :
+        include svg/vertex-orders-1.svg
+        p(style="margin: 1em 0 0"): strong Ces graphes ne sont pas possibles :
+        include svg/vertex-orders-2.svg
 
 ---
 
@@ -257,7 +257,7 @@ La découverte d’Euler peut ne pas sembler particulièrement utile dans la vie
 
 ::: column(width=240)
 
-    x-media(lightbox width=240 height=260 src="images/prague.jpg")
+    x-img(lightbox width=240 height=260 src="images/prague.jpg")
 
 :::
 
@@ -265,11 +265,11 @@ La découverte d’Euler peut ne pas sembler particulièrement utile dans la vie
 
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Poignées de main et fêtes
 
 ::: column.grow
-
 
 Vous avez été invité à une fête d'anniversaire extravagante. Vous et l'hôte inclus, ${hnd}{hnd|5|3,15,1} personnes sont présentes.
 
@@ -277,7 +277,7 @@ Le soir, alors que les invités se préparent à partir, tout le monde se serre 
 
 Nous pouvons représenter les poignées de main à l'aide d'un graphique: chaque personne est [[un sommet|une arête]] et chaque poignée de main est [[une arête|un sommet]].
 
-{.reveal(when=&#39;blank-0 blank-1&#39;)} Il est maintenant facile de compter le nombre d'arêtes dans le graphique. Nous constatons que là-bas avec ${hnd} personnes, il y a ${hnd*(hnd-1)/2} poignées de main.
+{.reveal(when='blank-0 blank-1')} Il est maintenant facile de compter le nombre d'arêtes dans le graphique. Nous constatons que là-bas avec ${hnd} personnes, il y a ${hnd*(hnd-1)/2} poignées de main.
 
 ::: column.s-hide(width=240)
 
@@ -303,7 +303,7 @@ Chacune des ${n}{n|5|2,8,1} personnes présentes à la fête serre la main avec 
 
 Malheureusement, cette réponse n’est pas tout à fait correcte: nous avons compté chaque poignée de main [[deux fois|une fois|trois fois]], _{span.reveal(when="blank-0")} une fois pour chacune des deux personnes impliquées._
 
-{.reveal(when="blank-0")} Par exemple, <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)"> les deux premiers les entrées de la rangée supérieure</x-target> sont en fait les mêmes. Le nombre correct de poignées de main pour ${n}{n|5|2,25,1} invités est <mfrac><mrow>${n} × ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
+{.reveal(when="blank-0")} Par exemple, [les deux premiers les entrées de la rangée supérieure](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) sont en fait les mêmes. Le nombre correct de poignées de main pour ${n}{n|5|2,25,1} invités est <mfrac><mrow>${n} × ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
 
 ---
 
@@ -344,6 +344,7 @@ Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts 
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Graphes plans
 
@@ -355,13 +356,13 @@ Dans un petit village, il existe trois centrales produisant de l’eau, de l’�
 
 ::: column(width=300)
 
-    x-media(width=300 height=200 src="images/power-plant.jpg")
+    x-img(width=300 height=200 src="images/power-plant.jpg")
 
 :::
 
 Essayez de connecter chacune des plantes ci-dessous à chacune des maisons, sans qu’une de vos lignes ne se croise:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn Clear
 
@@ -400,20 +401,23 @@ Le [graphe complet](gloss:complete-graph) `K_5` est le plus petit graphe non pla
 Le graphique du puzzle des trois utilitaires est le [graphique bipartite](gloss:bipartite-graph) `K_"3,3"`. Il s'avère que tout graphe non planaire doit contenir une [sous-division](gloss:subdivision) `K_5` ou `K_"3,3"` ou sous forme de sous-graphe.
 
 ---
-
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 Planarité
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md C'est un graphe planaire, mais les ${n}{n|7|5,20,1} sommets ont été brouillés. Réorganisez les sommets de manière à ce qu'aucun des bords ne se chevauche.
-        button.btn New Random Graph
+::: .box.f-blue
+
+#### Planarité
+
+    x-solved
+    svg#planarity.frame(viewBox="0 0 640 320")
+
+C'est un graphe planaire, mais les ${n}{n|7|5,20,1} sommets ont été brouillés. Réorganisez les sommets de manière à ce qu'aucun des bords ne se chevauche.
+
+    p.btn-row: button.btn New Random Graph
+
+:::
 
 ---
-
 > id: euler
 
 ### Formule d'Euler
@@ -455,7 +459,6 @@ _{span.euler-sum} 25 sommets + faces_
 
 En comparant ces nombres, vous remarquerez que le nombre d'arêtes correspond toujours à [[un|bigger|the same]] de moins que le nombre de faces plus le nombre de sommets. En d'autres termes, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Ce résultat s'appelle __l'équation d'Euler__ et est nommé d'après le même [mathématicien](bio:euler) qui a résolu le problème des ponts de Königsberg.
 
-
 Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas vérifier chacun d’eux pour voir si l’équation d’Euler fonctionne. Au lieu de cela, nous pouvons essayer de trouver une [preuve](gloss:proof) simple qui fonctionne pour tous les graphes…
 
 ---
@@ -464,7 +467,7 @@ Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas v�
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -561,6 +564,7 @@ __{.red} 90__ bords
 
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Coloration de la carte
 
@@ -574,7 +578,7 @@ Certaines «cartes» simples, comme un échiquier, n'ont besoin que de deux coul
 
 ::: column(width=240 style="margin-top: -10px")
 
-    x-media.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img.shifted(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -586,44 +590,35 @@ Certaines «cartes» simples, comme un échiquier, n'ont besoin que de deux coul
 
 Lorsque vous colorez la carte des États américains, 50 couleurs suffisent évidemment, mais il en faut beaucoup moins. Essayez de colorier les cartes ci-dessous avec le moins de couleurs possible:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
     
     x-tabbox.four-colours.full-width
       .tab
         h3 États Unis #[span.check(when="map-0")]
         x-solved
-        include svg/colours-1.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-1.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Amérique du sud #[span.check(when="map-1")]
         x-solved
-        include svg/colours-2.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-2.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Allemagne #[span.check(when="map-2")]
         x-solved
-        include svg/colours-3.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-3.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Angleterre #[span.check(when="map-3")]
         x-solved
-        include svg/colours-4.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-4.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
 
 ---
 
@@ -652,7 +647,7 @@ Comme auparavant, nous pouvons convertir une carte avec des pays et des frontiè
 
 ::: column(width=240 parent="right")
 
-    x-media(lightbox width=240 height=320 src="images/england-counties.jpg")
+    x-img(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
 
@@ -679,7 +674,7 @@ Le problème des quatre couleurs n’a guère progressé jusqu’en 1976, lorsqu
 Le théorème des quatre couleurs est le premier théorème mathématique bien connu à avoir été prouvé à l'aide d'un ordinateur, ce qui est devenu beaucoup plus courant et moins controversé depuis. Des ordinateurs plus rapides et un algorithme plus efficace signifient qu'aujourd'hui, vous pouvez résoudre le théorème des quatre couleurs sur un ordinateur portable en seulement quelques heures.
 
     figure
-      x-media(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
+      x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
       p.caption Cachet postal du département de mathématiques de l'Université <br/> de l'Illinois Urbana-Champaign, où travaillaient Haken et Appel.
 
 ---
@@ -703,6 +698,7 @@ Cependant, les mathématiciens ont également examiné des cartes de _empires_, 
 
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Le problème du vendeur ambulant
 
@@ -714,7 +710,7 @@ Le camion de livraison doit visiter toutes les villes, dans n'importe quel ordre
 
 ::: column(width=260)
 
-    x-media(src="images/truck.jpg" width=260 height=280)
+    x-img(src="images/truck.jpg" width=260 height=280)
 
 :::
 
@@ -752,7 +748,7 @@ Une méthode simple serait d'essayer tous les chemins possibles, en trouvant la 
 
 ::: column(width=220)
 
-    x-media(lightbox src="images/microchip.jpg" width=210 height=365)
+    x-img(lightbox src="images/microchip.jpg" width=210 height=365)
 
 :::
 
@@ -830,7 +826,7 @@ Les fourmis veulent trouver les itinéraires les plus courts possibles entre leu
 
 ::: column(width=220 parent="right")
 
-    x-media(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
+    x-img(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
 
 ::: column.grow
 
@@ -871,6 +867,7 @@ FAIRE
 
 > id: applications
 > section: applications
+> translated: auto
 
 ## Les graphiques au quotidien
 
@@ -915,7 +912,7 @@ Chaque fois que vous passez un appel ou chargez un site Web, les opérateurs de 
 
 ::: column(width=220)
 
-    x-media(lightbox src="images/phone.jpg" width=220 height=166)
+    x-img(lightbox src="images/phone.jpg" width=220 height=166)
 
 :::
 
@@ -925,7 +922,7 @@ Chaque fois que vous passez un appel ou chargez un site Web, les opérateurs de 
 
 Les graphiques jouent également un rôle important dans les transports et la navigation. Tous les réseaux de vol, de train et de métro forment des graphiques pouvant être utilisés pour créer des horaires efficaces. L’un des graphiques les plus reconnaissables est la carte du métro de Londres:
 
-    figure: x-media(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
+    figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
 ---
 
@@ -937,13 +934,13 @@ Toutes les routes et les autoroutes forment également un vaste réseau, qui est
 
 ::: column(width=60)
 
-    x-media(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
+    x-img(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
 
 :::
 
 ::: column(width=280)
 
-    x-media(lightbox src="images/congestion.jpg" width=280 height=170)
+    x-img(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
 
@@ -967,38 +964,37 @@ Il existe d'innombrables autres graphiques dans la science, l'ingénierie ou la 
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/molecules.jpg" width=200 height=200)
+    x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
 {.caption} Les liens entre les atomes de __molécules__ et les grilles cristallines forment un graphe.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/epidemic.jpg" width=200 height=200)
+    x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
 {.caption} La propagation __des maladies__ et des épidémies peut être modélisée à l'aide d'un réseau.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/evolution.jpg" width=200 height=200)
+    x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
 {.caption} En Biologie, les __arbres évolutifs__ illustrant l'ascendance des espèces forment un graphique.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/network6.jpg" width=200 height=200)
+    x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
 {.caption} Les différents composants des __circuits électriques__ et des puces informatiques forment un réseau.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/letters.jpg" width=200 height=200)
+    x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
 {.caption} La structure grammaticale des __langues__ peut être modélisée à l'aide de graphiques, par exemple pour créer des algorithmes de traduction.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/finance.jpg" width=200 height=200)
-
+    x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
 {.caption} Les graphes ont également de nombreuses applications en __probabilités__, __en théorie des jeux__ et en __mathématiques financières__.
 
@@ -1014,7 +1010,7 @@ Enfin, pensons à un exemple particulièrement intéressant de graphes existant 
 
 Lorsque nous commençons à dessiner des graphiques sur les médias sociaux, nous pouvons clairement voir certains __groupes__ d'amis communs, qui peuvent être allés dans la même école ou vivre dans la même ville. Nous pouvons également déterminer la __centralité__ d'une personne, qui dépend du degré de connexion d'un sommet et qui peut être un indicateur de la popularité d'une personne sur les réseaux sociaux.
 
-    figure: x-media(lightbox src="images/social-network.png" width=720 height=500)
+    figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
 ---
 
@@ -1028,7 +1024,7 @@ Une question passionnante serait désormais la suivante: si vous choisissez deux
 
 ::: column(width=200)
 
-    x-media(src="images/facebook-like.png" width=200 height=200)
+    x-img(src="images/facebook-like.png" width=200 height=200)
 
 :::
 
@@ -1041,7 +1037,7 @@ Selon une étude menée [par Facebook](https://research.facebook.com/blog/three-
 En d'autres termes, si vous choisissez l'un des milliards d'utilisateurs de Facebook dans le monde entier, ils auront un ami d'un ami qui connaît un ami d'un de vos amis. Et cela inclut des célébrités, des politiciens ou des membres de la royauté…
 
     figure
-      x-media(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
+      x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
       p.caption Geographic visualisation of all Facebook friendships in 2010.
 
 ---
@@ -1050,7 +1046,7 @@ En d'autres termes, si vous choisissez l'un des milliards d'utilisateurs de Face
 
 ::: column(width=200)
 
-    x-media(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
+    x-img(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
 
 ::: column.grow
 

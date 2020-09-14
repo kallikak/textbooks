@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import {wait, Color} from '@mathigon/core';
-import {Rectangle, Point, Random, numberFormat} from '@mathigon/fermat';
+import {Color, wait} from '@mathigon/core';
+import {numberFormat, Point, Random, Rectangle} from '@mathigon/fermat';
 import {$N, Observable} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
 import {DotMachine} from './components/dot-machine';
@@ -39,7 +39,7 @@ export function race($step: Step) {
 }
 
 export function choice($step: Step) {
-  const $buttons = $step.$$('button');
+  const $buttons = $step.$$('.btn');
   for (const $b of $buttons) {
     $b.on('click', () => {
       $step.score('choice');
@@ -71,23 +71,25 @@ export function convergence($step: Step) {
 
 export function dots($step: Step) {
   const $machine = $step.$('x-dot-machine') as DotMachine;
-  const $btn = $step.$('button')!;
+  const $btn = $step.$('.btn')!;
 
   let dStep = 0;
   let xStep = 0;
 
   $machine.on('add', ({i, cell, point}) => {
-    if (i !== xStep + 1)
+    if (i !== xStep + 1) {
       return $step.addHint('incorrectCell', {class: 'incorrect'});
+    }
 
     cell.addDotAntidot(point);
     dStep = xStep + 1;
     $step.score('d' + dStep);
   });
 
-  $btn.on('click', async function () {
-    if (dStep <= xStep)
+  $btn.on('click', async function() {
+    if (dStep <= xStep) {
       return $step.addHint('addPairFirst', {class: 'incorrect'});
+    }
 
     await $machine.cells[dStep].explode();
     await wait(400);
@@ -158,7 +160,7 @@ function addDots($machine: DotMachine, className: string) {
 
 export function dots3($step: Step) {
   const $machine = $step.$('x-dot-machine') as DotMachine;
-  const $button = $step.$('button')!;
+  const $button = $step.$('.btn')!;
 
   $button.one('click', () => {
     addDots($machine, 'dark');

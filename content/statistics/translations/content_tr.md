@@ -80,7 +80,7 @@ Pearson’ın bu çarpık sonuçları görme ihtimali 100 milyonda 1’den azdı
 
 ::: column(width=300)
 
-    x-media(src="images/cocktails.jpg" width=300 height=185)
+    x-img(src="images/cocktails.jpg" width=300 height=185)
 
 ::: column.grow
 Monte Carlo'ya gittiğinde, nihayet çarpık sonuçların nedeninin çok farklı bir nitelikte olduğunu keşfetti: Sonuçları kaydetmesi için gönderilen gazeteciler kumarhanenin barında oturuyorlardı, bir şeyler içiyor ve öylesine renklere oynuyorlardı...
@@ -122,18 +122,12 @@ Bilgisayar bir paket sigara büyüklüğündeydi ve bellerine sarılmıştı. Ru
 ---
 > id: dealer-2
 
-    figure: x-media(src="images/las-vegas.jpg" width=760 height=345)
+    figure: x-img(src="images/las-vegas.jpg" width=760 height=345)
 
 1961 yazında Thorp ve Shannon Las Vegas’ta bilgisayarlarını denediler. Fakat bir miktar para kazanırken, model uçakların bile parçalarını içeren bilgisayar, daha büyük ölçekte kullanılacak kadar sağlam değildi.
 
 Thorp sonuçlar hakkında bilimsel bir makale yazdı ve sonra tabii ki bilgisayarlar kumarhanelerde yasaklandı. Thorp da Las Vegas’taki tüm kumarhanelerden yasaklandı fakat o andan itibaren daha karlı bir işe yöneldi: matematiği ve bilgisayarı borsa da kullanmak.
 
-    // Shannon cryptography and code-breaking during World War II, and would go
-    // on to become known as the father of information theory - and, indeed, the
-    // information age. Shannon taught him to juggle three balls, and that he
-    // rode a unicycle on a steel cable strung between two tree stumps. "He
-    // later reached his goal," he wrote, "which was to juggle the balls while
-    // riding the unicycle on the tightrope."
 
 
 

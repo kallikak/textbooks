@@ -138,9 +138,9 @@ We say that a polygon is [__concave__](gloss:concave) if it has a section that
 “points inwards”. You can imagine that this part has [“caved in”](target:cave).
 Polygons that are _not_ concave are called [__convex__](gloss:convex).
 
-There are two ways you can easily identify concave polygons: they have at least
-one [internal angle that is bigger than 180°](target:angle). They also have at
-least one [diagonal that lies _outside_ the polygon](target:diagonal).
+There are two ways you can easily identify concave polygons: they have [at least
+one internal angle](target:angle) that is bigger than 180°. They also have [at
+least one diagonal](target:diagonal) that lies _outside_ the polygon.
 
 In convex polygons, on the other hand, all internal angles are less than
 [[180]]°, and all diagonals lie [[inside|outside]] the polygon.
@@ -205,14 +205,14 @@ We already know the sum of all [internal angles](gloss:internal-angle) in
 polygons. For regular polygons all these angles have [[the same size|are alternate angles]],
 so we can work out the size of a single internal angle:
 
-{.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[sum of all angles|number of angles]]</mrow><mrow>[[number of angles|sum of all angles]]</mrow></mfrac>
+{.text-center.reveal(when="blank-0")} `"angle" = blank("sum of all angles","number of angles")/
+blank("number of angles","sum of all angles")`
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} If `n=3` we get the size of the
 internal angles of an equilateral triangle – we already know that it must be
 [[60]]°. _{span.reveal(when="blank-3")} In a regular polygon with ${x}{x|6|3,12,1}
-sides, every internal angle is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
-${Math.round(180-360/x)}°._
+sides, every internal angle is 180° – `"360°"/var("x")` = ${round(180-360/x)}°._
 
 ---
 > id: regular-area
@@ -246,7 +246,7 @@ ${Math.round(180-360/x)}°._
 
 ::: column.grow
 Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
-sides. Every side has length [{.step-target.pill.green}1m](target:base). Let’s
+sides. Every side has length [{.green} 1m](target:base). Let’s
 try to calculate its area!
 
 First, we can split the polygon into ${toWord(n)} congruent,
@@ -255,24 +255,24 @@ First, we can split the polygon into ${toWord(n)} congruent,
 {.reveal(when="blank-0")} We already know the [[base|height|area]] of these
 triangles, but we also need the [[height|legs|medians]] to be able to calculate
 its area. _{span.reveal(when="blank-2")} In regular polygons, this height
-is sometimes called the [{.step-target.pill.yellow}apothem](target:apothem)._
+is sometimes called the [{.yellow}apothem](target:apothem)._
 
-{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [right angled
+{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [{.blue} right angled
 triangle](target:right-triangle) formed by the apothem and half the base of the
 isosceles triangle. This means that we can use trigonometry!
 
-{.reveal(when="blank-1 blank-2" delay=2000)} The [{.step-target.pill.blue}base angles](target:base-angle)
+{.reveal(when="blank-1 blank-2" delay=2000)} The [{.blue} base angles](target:base-angle)
 of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
-size of the [internal angles](target:int-angle) of the polygon:
+size of the [{.red} internal angles](target:int-angle) of the polygon:
 
 {.text-center.reveal(when="blank-3")} `pill(α, "blue", "alpha") = 1/2 (180° -
 (360°)/var("n")) = var("round(90-180/n,2)")`
 
 {.reveal(when="blank-3")} To find the apothem, we can use the definition of
-[[tangents|sine|cosine]]:
+the [[tangent|sine|cosine]] function:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
@@ -280,7 +280,7 @@ blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 var("round(tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
-[isosceles triangle](target:isosceles-triangle) is
+[{.blue}isosceles triangle](target:isosceles-triangle) is
 
 {.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
 = 1/2 pill("1m", "green", "base") × pill(var("round(tan(pi/2-pi/n)/2,2)"),
@@ -325,8 +325,8 @@ All of its sides have the same length, and all of its angles are equal.
       path.red(x="segment(c,d)" target="side" mark="bar")
       path.red(x="segment(d,a)" target="side" mark="bar")
 
-{.caption} A __square__ is a quadrilateral with [four equal sides](target:side)
-and [four equal angles](target:angle).
+{.caption} A __square__ is a quadrilateral with [{.red} four equal sides](target:side)
+and [{.blue} four equal angles](target:angle).
 :::
 
 ---
@@ -353,7 +353,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(c,d)")
       path.red(x="segment(d,a)")
 
-{.caption} A __Rectangle__ is a quadrilateral with [four equal angles](target:angle).
+{.caption} A __Rectangle__ is a quadrilateral with [{.blue} four equal angles](target:angle).
 ::: column.quadrilateral
 
     x-geopad(width=210 height=120): svg
@@ -367,7 +367,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(g,h)" target="side" mark="bar")
       path.red(x="segment(h,e)" target="side" mark="bar")
 
-{.caption} A __Rhombus__ is a quadrilateral with [four equal sides](target:side).
+{.caption} A __Rhombus__ is a quadrilateral with [{.red} four equal sides](target:side).
 :::
 
 ---
@@ -563,8 +563,8 @@ are always congruent.
 Start by drawing one of the diagonals of the parallelogram.
 
 {.reveal(when="diagonal")} The diagonal creates four new angles with the sides
-of the of the parallelogram. The two [red angles](target:red-angle) and the two
-[blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
+of the of the parallelogram. The two [{.red} red angles](target:red-angle) and the two
+[{.blue} blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
 so they must each be [[congruent|adjacent|supplementary]].
 
 {.reveal(when="blank-0")} Now if we look at the [two triangles](target:triangles)
@@ -655,7 +655,7 @@ the Kite is the only one that can also be [concave](gloss:concave): if it is
 shaped like a dart or arrow:
 ::: column(width=320)
 
-    x-media(src="images/kites.jpg")
+    x-img(src="images/kites.jpg")
 
 :::
 
@@ -732,22 +732,22 @@ _{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
 triangles](target:triangle1). We know that they are congruent from the
 [SSS](gloss:triangle-sss) condition: both triangles have [three congruent
 sides](target:sss) (red, green and blue).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
 [corresponding angles](target:angles) must also be congruent.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-1")} This means, for example, that the [diagonal](target:d1)
 is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
 ends.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
 we get [two more, smaller triangles](target:triangle2). These must also be
 congruent, because of the [SAS](gloss:triangle-sss) condition: they have the
 same [two sides and included angle](target:sas).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
 the same as [angle β](target:beta). Since they are adjacent, [supplementary
@@ -826,11 +826,11 @@ Like before, try to draw a rectangle that has the same area as this trapezium.
 _{span.reveal(when="draw-2")} Can you see how the [missing and added
 triangles](target:triangles-3) on the left and the right cancel out?_
 
-{.reveal(when="draw-2" delay=2000)} The [{.step-target.pill.green} height](target:t-height)
+{.reveal(when="draw-2" delay=2000)} The [{.green} height](target:t-height)
 of this rectangle is the [[distance between|average of|length of]] the [parallel
 sides](target:bases) of the trapezium.
 
-{.reveal.r(when="blank-2")} The [{.step-target.pill.yellow} width](target:t-width)
+{.reveal.r(when="blank-2")} The [{.yellow} width](target:t-width)
 of the rectangle is the distance between the [[midpoints|endpoints]] of the two
 non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
 called the __midsegment__ of the trapezium._
@@ -885,12 +885,12 @@ triangles](target:inside) that make up the kite are the same as the
 [four gaps](target:outside) outside it?_
 
 {.reveal(when="blank-5")} This means that the area of a kite with diagonals
-[{.step-target.i.pill.green}d1](target:d31) and
-[{.step-target.i.pill.yellow}d2](target:d32) is
+[{.i.green}d1](target:d31) and
+[{.i.yellow}d2](target:d32) is
 
 {.text-center.reveal(when="blank-5")} _Area_ = `1/2`
-[{.step-target.i.pill.green}d1](target:d31) ×
-[{.step-target.i.pill.yellow}d2](target:d32).
+[{.i.green}d1](target:d31) ×
+[{.i.yellow}d2](target:d32).
 :::
 
 ::: tab
@@ -926,10 +926,8 @@ we can use either the equation for the area of a parallelogram, or that for the
 area of a kite:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Area_ =
-[{.step-target.i.pill.blue}base](target:base) ×
-[{.step-target.i.pill.red}height](target:height) = `1/2`
-[{.step-target.i.pill.green}d1](target:d41) ×
-[{.step-target.i.pill.yellow}d2](target:d42).
+[{.i.blue}base](target:base) × [{.i.red}height](target:height) = `1/2`
+[{.i.green}d1](target:d41) × [{.i.yellow}d2](target:d42).
 
 {.reveal(when="blank-6 blank-7" delay=1000)} _In different contexts, you might
 be given different parts of a Rhombus (sides, height, diagonals), and you should
@@ -972,32 +970,32 @@ without any gaps or overlaps. Patterns like that are called
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
 {.caption} [[Hexagonal|Triangular|Quadratic]] honeycomb
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
 
 {.caption} Sinaloan Milk Snake skin
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
 
 {.caption} Cellular structure of leafs
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
+    x-img(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
 
 {.caption} Basalt columns at Giant’s Causeway in Northern Ireland
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
 
 {.caption} Pineapple skin
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
 
 {.caption} Shell of a tortoise
 :::
@@ -1010,32 +1008,32 @@ technology – from ancient Rome to the present. Here are a few examples:
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
+    x-img(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
 
 {.caption} [[Rectangular|Quadratic|Hexagonal]] pavement pattern
 ::: column(width=200)
 
-    x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
+    x-img(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
 
 {.caption} Greenhouse at the Eden Project in England
 ::: column(width=200)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
 
 {.caption} Mosaic at Alhambra
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
+    x-img(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
 
 {.caption} [[Triangular|Hexagonal|Rectangular]] roof at the British Museum in London
 ::: column(width=200)
 
-    x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
+    x-img(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
 
 {.caption} Cellular tessellation pavilion in Sydney
 ::: column(width=200)
 
-    x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
+    x-img(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
 
 {.caption} _Study of Regular Division of the Plane with Reptiles_, M. C. Escher
 :::
@@ -1054,9 +1052,16 @@ new shapes from the sidebar onto the canvas. Which shapes tessellate well? Are
 there any shapes that don’t tessellate at all? Try to create interesting
 patterns!
 
-    include ./components/tessellation
-    figure: x-tessellation
-    x-gesture(target="x-tessellation .menu" slide="-300, 140")
+    figure: .tessellation
+      x-polypad
+      .menu
+        for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
+          .add(data-shape=s)
+      .btn-row
+        button.btn Clear
+        button.btn Download
+      svg.overlay: g.tiles.active
+    x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
       h4 Examples of other students’ tessellations
       .row.padded-thin
@@ -1302,28 +1307,28 @@ knows if there are any others, or if these 15 are the only ones…
 
 ### Tessellations in Art
 
-Tessellations we both a tool and inspiration for many artists, architects and 
-designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher’s
-work contains strange, mutating creatures, patterns and landscapes:
+Many artists, architects and designers use tessellations in their work. One of the most famous
+examples is the Dutch artist [M. C. Escher](bio:escher). His works contain strange, mutating
+creatures, patterns and landscapes:
 
     .row
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
         p.caption “Sky and Water I” (1938)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
         p.caption “Lizard” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
         p.caption “Lizard, Fish, Bat” (1952)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
         p.caption “Butterfly” (1948)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
         p.caption “Two Fish” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
 These artworks often look fun and effortless, but the underlying mathematical
@@ -1370,7 +1375,7 @@ noticed that a non-periodic pattern can be rolled up without any bulges.
 > id: polyhedra
 
 Up to now we have just looked at what we can do with polygons in a flat,
-two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
+two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a three-dimensional
 object that is made up of polygons. Here are some examples:
 
 ::: column.padded-thin(width=220)
@@ -1425,9 +1430,22 @@ you’ll learn how to actually prove it mathematically.
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Our entire world is 3-dimensional – but it is often much easier to draw or
-visualise flat, 2-dimensional objects. And there are a few different ways to
-view 3-dimensional polyhedra in a 2-dimensional way.
+Here is a demo for intersections of a polyhedron and a plane:
+
+    figure.var
+      x-select.tabs(:bind="poly")
+        div(value="tetrahedron") Tetrahedron
+        div(value="cube") Cube
+        div(value="octahedron") Octahedron
+        div(value="dodecahedron") Dodecahedron
+        div(value="icosahedron") Icosahedron
+      x-polyhedron-slice(:shape="poly" :opacity="opacity")
+
+---
+
+Our entire world is three-dimensional – but it is often much easier to draw or
+visualise flat, two-dimensional objects. And there are a few different ways to
+view three-dimensional polyhedra in a two-dimensional way.
 
     //- x-folding(shape="Tetrahedron" size=400)
     //- x-folding(shape="Cube" size=400)
@@ -1448,15 +1466,6 @@ is to use a net. A net is an unfolded, flat representation of the sides of a
 three-dimensional shape.
 
 rotate a cube to make a hexagonal cross-section
-
----
-
-## Prisms and Pyramids
-
-> section: prisms-pyramids
-> sectionStatus: dev
-
-TODO
 
 ---
 
@@ -1489,7 +1498,7 @@ philosopher [Plato](bio:plato).
     //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 So what do the Platonic solids look like – and how many of them are there? To
-make a 3-dimensional shape, we need at least [[3]] faces to meet at every
+make a three-dimensional shape, we need at least [[3]] faces to meet at every
 vertex. Let’s start systematically with the smallest regular polygon:
 equilateral triangles:
 
@@ -1556,7 +1565,7 @@ If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
 ::: column.grow
 If [[six]] triangles meet at every vertex, something different happens: we
 simply get [[a tessellation|a quadrilateral|another Icosahedron]],
-_{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
+_{span.reveal(when="blank-1")}instead of a three-dimensional polyhedron._
 :::
 
 ---
@@ -1656,7 +1665,7 @@ seems like there are no Platonic solids consisting of hexagons._
 > id: platonic-final
 
 The same also happens for all regular polygons with more than six sides. They
-don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
+don’t tessellate, and we certainly don’t get any three-dimensional polygons.
 
 This means that there are just [[five]] Platonic solids! Let’s have a look at
 all of them together:
@@ -1846,12 +1855,12 @@ in nature – and we can copy these properties in science and engineering.
 
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
+    x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Radiolaria skeleton
     
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/virus.jpg")
+    x-img(lightbox width=180 height=180 src="images/virus.jpg")
     p.caption Icosahedral virus
 
 ::: column.grow
@@ -1864,12 +1873,12 @@ elements but is almost shaped like a sphere.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
+    x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Buckyball molecule
       
 ::: column(width=180)
 
-    x-media(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
+    x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Montreal Biosphere
       
 ::: column.grow
@@ -1884,12 +1893,12 @@ Fuller](bio:fuller), famous for constructing similar-looking buildings.
 
 ::: column(width=180)
 
-    x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
+    x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Fluorite octahedron
       
 ::: column(width=180)
 
-    x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
+    x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Pyrite cube
       
 ::: column.grow
@@ -1900,12 +1909,12 @@ When they crack or shatter, you can see these shapes on a larger scale.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
     p.caption Octagonal space frames
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/louvre.jpg")
+    x-img(lightbox width="180", height="180", src="images/louvre.jpg")
     p.caption Louvre museum in Paris
 
 ::: column.grow
@@ -1916,12 +1925,12 @@ support large roofs and heavy bridges.
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/football.jpg")
+    x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Football
     
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/dice.jpg")
+    x-img(lightbox width="180", height="180", src="images/dice.jpg")
     p.caption Polygonal role-playing dice
 
 ::: column.grow

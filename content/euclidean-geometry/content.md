@@ -15,7 +15,7 @@ patterns, and wanted to explore and explain them. For the first time, they began
 to study mathematics just “for fun”, without a specific application in mind. 
 ::: column(width=300)
 
-    x-media(src="images/tablet.jpg" width=300 height=210)
+    x-img(src="images/tablet.jpg" width=300 height=210)
 
 {.caption} A Babylonian clay tablet, dated 1800 BC, that contains geometric
 calculations.
@@ -35,9 +35,8 @@ _{span.reveal(when="p1 p2")} Let’s draw a semicircle around these points._
 {.reveal(when="p1 p2")} Now pick a third point that lies somewhere on the
 [circumference](target:circumf) of the semicircle.
 
-{.reveal(when="p3")} Let’s draw the [triangle](target:triangle) formed by the
-two corners of the semicircle, as well as the point you picked on the
-circumference.
+{.reveal(when="p3")} We can draw a [triangle](target:triangle) formed by the two corners of the
+semicircle, as well as the point you picked on the circumference.
 
 {.reveal(when="p3" delay=1000)} Try moving the position of the three points and
 observe what happens to the [angle](target:angle) at the top of the triangle.
@@ -55,7 +54,7 @@ fundamental way? He was so awed by his discovery that, according to legend, he
 sacrificed an entire ox to thank the gods.
 
     figure
-      x-media(src="images/temple.svg" width=400 height=170)
+      x-img(src="images/temple.svg" width=400 height=170)
 
 However, simply _observing_ a relationship like this was not enough for Thales.
 He wanted to understand _why_ it is true, and verify that it is _always_ true
@@ -76,36 +75,36 @@ satellites into space. Here are a few more examples:
 
 ::: column(width=200)
 
-    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+    x-img(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
 {.caption} Geometry allowed the ancient Egyptians to construct gigantic,
 perfectly regular pyramids.
 ::: column(width=200)
 
-    x-media(src="images/sextant.jpg" width=200 height=200)
+    x-img(src="images/sextant.jpg" width=200 height=200)
 
 {.caption} Sailors use sextants to determine their location while at sea, using 
 angles formed by the sun or stars.
 ::: column(width=200)
 
-    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
+    x-img(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
 
 {.caption} Geometry is needed to create realistic video game or movie graphics.
 ::: column(width=200)
 
-    x-media(src="images/plane.jpg" width=200 height=200)
+    x-img(src="images/plane.jpg" width=200 height=200)
 
 {.caption} Geometry can help design and test new airplane models, making them
 safer and more efficient.
 ::: column(width=200)
 
-    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
+    x-img(src="images/cctv.jpg" lightbox width=200 height=200)
 
 {.caption} Geometry was key when designing this skyscraper in Beijing – and to
 make sure it won’t fall over.
 ::: column(width=200)
 
-    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
+    x-img(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
 {.caption} Geometry allows us to predict the position of stars, planets and
 satellites orbiting Earth.
@@ -144,7 +143,7 @@ capital letters.
 {.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
 you can move around, while [smaller, outlined dots](target:no-move) indicate
 fixed points which you can’t move.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -160,6 +159,7 @@ _{button.next-step} Continue_
       path.yellow(x="line(P,Q)")
 
 ::: column.grow
+
 A [__line__](gloss:line) is a set of infinitely many points that extend forever
 in both directions. Lines are always straight and, just like points, they don’t
 take up any space – they have no _width_.
@@ -169,7 +169,8 @@ refer to them using two points that lie on the line, for example
 <span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
 <span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
 order of the points does not matter.
-_{button.next-step} Continue_
+[Continue](btn:next)
+
 :::
 
 ---
@@ -190,7 +191,7 @@ _{button.next-step} Continue_
 points, without extending to infinity. We can label them just like lines, but
 without arrows on the bar above: `bar(AB)` or `bar(BA)`. Like, before the order
 of the points does not matter.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -213,7 +214,7 @@ they start at a point (the sun) and then keep going forever.
 
 {.r} When labelling rays, the arrow shows the direction where it extends to
 infinity, for example `vec(AB)`. This time, the order of the points _does_ matter.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -234,7 +235,7 @@ _{button.next-step} Continue_
 {.r} A [__circle__](gloss:circle) is the collection of points that all have the
 same [distance](target:radius) from a point in the center. This distance is
 called the [__radius__](gloss:circle-radius).
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -256,7 +257,7 @@ and shape, and we could [turn and slide](target:move) one of them to exactly
 match up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
 
-The symbol for congruence is `≅`, so we would say that `A ≅ B`.
+The symbol for congruence is _{span(voice="this")}`≅`_, so we would say that `A ≅ B`.
 :::
 
 Here are a few different geometric objects – connect all pairs that are
@@ -330,6 +331,7 @@ has many of the same properties of _equality_:
       path.yellow(x="l2.shift(-30,40)" mark="arrow2" label="e")
 
 ::: column.grow
+
 Two straight lines that never intersect are called [__parallel__](gloss:parallel).
 They point into the same direction, and the distance between them is always
 [[the same|increasing|decreasing]].
@@ -341,6 +343,7 @@ other!
 {.reveal(when="blank-0")} In diagrams, we denote parallel lines by adding one or
 more small arrows. In this example, __{.m-red}`a ∥ b ∥ c`__ and
 __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
+
 :::
 
 ---
@@ -354,11 +357,13 @@ __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
       path.green(x="line(point(50,100),point(70,0))" label="b")
 
 ::: column.grow
+
 The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
 These lines are called [__perpendicular__](gloss:perpendicular).
 
 {.r} In this example, we would write  _{.b.m-blue}a_ `⊥` _{.b.m-green}b_. The
 `⊥` symbol simply means _“is perpendicular to”_.
+
 :::
 
 ---
@@ -367,6 +372,7 @@ These lines are called [__perpendicular__](gloss:perpendicular).
 ### Euclid’s Axioms
 
 ::: column.grow
+
 Greek mathematicians realised that to write formal proofs, you need some sort of
 _starting point_: simple, intuitive statements, that everyone agrees are true.
 These are called [__axioms__](gloss:axiom) (or _postulates_).
@@ -376,14 +382,16 @@ results, using the rules of logic.
 
 The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
 the _father of geometry_, published the five axioms of geometry:
+
 ::: column(width=220)
 
     img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclid of Alexandria
+
 :::
 
-::: column(width=220)
+::: column(width=220 parent="padded-thin")
 
     x-geopad(width=220 height=160): svg
       circle.move(name="a" cx=30 cy=130 target="1_point")
@@ -392,19 +400,20 @@ the _father of geometry_, published the five axioms of geometry:
 
 {.text-center }__First Axiom__  
 You can join any [two points](target:1_point) using exactly one straight
-[line segment](target:1_line).
+[{.red} line segment](target:1_line).
 
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      circle.move(name="c" cx=60 cy=100 target="2_segment")
-      circle.move(name="d" cx=180 cy=60 target="2_segment")
-      path.red(x="line(c,d)")
+      circle.move(name="c" cx=60 cy=100)
+      circle.move(name="d" cx=180 cy=60)
+      path.blue(x="line(c,d)" target="2_line")
       path(x="segment(c,d)" target="2_segment")
+      path.blue.transparent(x="segment(c,d)" target="2_line")
 
 {.text-center }__Second Axiom__  
-You can extend any [line segment](target:2_segment) to an<br>
-infinite line.
+You can extend any [line segment](target:2_segment) to an
+[{.blue} infinitely long line](target:2_line).
 
 ::: column(width=220)
 
@@ -412,11 +421,11 @@ infinite line.
       circle.move(name="e" cx=120 cy=80 target="3_center" label="P")
       circle.move(name="f" cx=170 cy=130)
       path(x="segment(e,f)" label="r" target="3_radius")
-      path.red(x="circle(e,distance(e,f))" target="3_circle")
+      path.green(x="circle(e,distance(e,f))" target="3_circle")
 
 {.text-center }__Third Axiom__  
-Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
-can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
+Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you can draw a
+[{.green} circle](target:3_circle) with centre _P_ and radius _r_.
 
 ::: column(width=220)
 
@@ -424,34 +433,33 @@ can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
       circle.move(name="x" cx=50 cy=100)
       circle(hidden name="xa" x="x.translate(point(110,80).subtract(x).rotate(pi/4).unitVector.scale(50))")
       circle(hidden name="xb" x="x.translate(point(110,80).subtract(x).rotate(-pi/4).unitVector.scale(50))")
-      path.fill.red(x="angle(xb,x,xa)")
+      path.fill.orange(x="angle(xb,x,xa)" target="4_angle")
       path.dark(x="segment(x,xa)")
       path.dark(x="segment(x,xb)")
 
       circle.move(name="y" cx=190 cy=60)
       circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).unitVector.scale(50))")
       circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).unitVector.scale(50))")
-      path.fill.red(x="angle(yb,y,ya)")
+      path.fill.orange(x="angle(yb,y,ya)" target="4_angle")
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
 {.text-center }__Fourth Axiom__  
-Any two right angles are congruent.
+Any two [{.orange} right angles](target:4_angle) are congruent.
 
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      circle.move(name="g" cx=170 cy=60 target="5_point" label="P")
-      path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
-      path.red(x="line5.parallel(g)" target="5_parallel")
+      circle.move(name="g" cx=160 cy=60 target="5_point" label="P")
+      path(name="line5" x="line(point(50,80),point(130,140))" target="5_line" label="L")
+      path.yellow(x="line5.parallel(g)" target="5_parallel")
 
 {.text-center }__Fifth Axiom__  
-Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
-there is exactly [one line](target:5_parallel) through _P_ that is
-[parallel](gloss:parallel) to _L_.
+Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_, there is exactly
+[{.yellow} one line](target:5_parallel) through _P_ that is [parallel](gloss:parallel) to _L_.
 :::
 
-{.r} _{button.next-step} Continue_
+{.r} [Continue](btn:next)
 
 ---
 > id: jefferson
@@ -468,7 +476,7 @@ textbook for thousands of years.
 
 ::: column(width=220)
 
-    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+    x-img(src="images/elements.jpg" width=220 height=330 lightbox)
 
 :::
 
@@ -477,11 +485,14 @@ Jefferson](bio:jefferson). When writing the Declaration of Independence in 1776,
 he wanted to follow a similar approach. He begins by stating a few, simple
 “axioms” and then “proves” more complex results:
 
-    .parchment “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
+{div.parchment.voice} “We hold these truths to be self-evident: that all men are created equal,
+that they are endowed by their Creator with certain unalienable Rights, that among these are Life,
+Liberty and the pursuit of Happiness.”
 
-{.text-center.follows} `=>`
+{.text-center.follows.no-voice} `=>`
 
-    .parchment We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
+{div.parchment.voice} We, therefore … declare, that these United Colonies are, and of right ought
+to be, free and independent states.”
 
 This is just one example where Euclid’s ideas in mathematics have inspired
 completely different subjects.
@@ -508,11 +519,11 @@ pieces of string that contained many knots at equal intervals. But these were
 also not perfectly accurate, and different string had the knots placed at
 slightly different distances.
 
-    figure: x-media(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
+    figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
 ::: column(width=200)
 
-    x-media(src="images/units.png" width=200 height=336)
+    x-img(src="images/units.png" width=200 height=336)
 
 :::
 
@@ -581,7 +592,7 @@ straight-edge and compass.
 
 ::: column(width=340)
 
-    x-media(src="images/archimedes.jpg" width=340 height=265)
+    x-img(src="images/archimedes.jpg" width=340 height=265)
 
 {.caption} The Greek Mathematician [Archimedes](bio:archimedes) was studying
 Geometry when he was killed by Roman invaders. His last words were “do not
@@ -600,15 +611,13 @@ disturb my circles”.
 {.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
 straight-edge and compass.
 
-To begin, draw a line segment anywhere in a box on the right. With the
-<x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target>
-selected, simply drag from start to end. This segment will be one of the sides
-of the triangle.
+To begin, draw a line segment anywhere in a box on the right. With the [{.no-margins} line
+tool](->#equilateral_.tool:nth-child(3)) selected, simply drag from start to end. This segment will
+be one of the sides of the triangle.
 
-{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
-of the line segments as center, and go through the other endpoint. With
-the <x-target no-margins to="#equilateral .tool:nth-child(5)">circle tool</x-target> selected,
-simply drag from one endpoint to the other.
+{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints of the line
+segments as center, and go through the other endpoint. With the [{.no-margins} circle
+tool](->#equilateral_.tool:nth-child(5)) selected, simply drag from one endpoint to the other.
 
 {.reveal(when="circle1 circle2")} We already have two vertices of the triangle,
 and the third one is the intersection of the two circles. Use the line tool
@@ -678,14 +687,14 @@ temple that was _exactly twice_ the volume of the existing one.
 
 ::: column(width=300)
 
-    x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
+    x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
     
 {.caption} A reconstruction of a temple in Delphi
 :::
 
 Note that _doubling the volume_ is not the same as _doubling an edge of the
-cube_. In fact, if the [[3-dimensional|2-dimensional|1-dimensional]] volume
-increases by a factor of 2, the [[1-dimensional|3-dimensional|2-dimensional]]
+cube_. In fact, if the [[three-dimensional|two-dimensional|one-dimensional]] volume
+increases by a factor of 2, the [[one-dimensional|three-dimensional|two-dimensional]]
 edge of the cube will increase by a factor of `root(2,3)`.
 
 ---
@@ -774,24 +783,36 @@ TODO
 Using straight-edge and compass is not the only way to construct geometric
 shapes. Another technique uses no tools at all: __Origami__.
 
-The word _Origami_ (折り紙) comes from the Japanese _oru_ (to fold) and _kami_
+The word _Origami_ _{span.no-voice}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
 (paper). The goal is to make objects out of one or more sheets of paper,
 without any additional tools like glue or scissors. You can create incredibly
 beautiful and impressive designs – all of these figures were built using nothing
 but rectangular sheets of paper:
 
 ::: column(width=186)
-    x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+
+    x-img(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+
 ::: column(width=186)
-    x-media(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+
+    x-img(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+
 ::: column(width=186)
-    x-media(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+
+    x-img(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+
 ::: column(width=186)
-    x-media(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+
+    x-img(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+
 ::: column(width=186)
-    x-media(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+
+    x-img(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+
 ::: column(width=186)
-    x-media(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+
+    x-img(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+
 :::
 
 ---
@@ -845,7 +866,7 @@ how long you want it to be by picking the location of the fold.
 This _crane_ is one of the oldest and most famous Origami models. We have many
 more [instructions for Origami models](/origami) you can try!
 
-    figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
+    figure: x-img(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
@@ -909,7 +930,7 @@ It is possible to trisect angles and double cubes using just paper folding!
 Of course, it is impossible to fold any _curved_ lines, and you still can’t
 square the circle with origami.
 
-    figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
+    figure: x-img(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
 ---
 > id: origami-applications
@@ -968,7 +989,7 @@ blood in order to enlarge clogged arteries or veins.
 
 ::: column(width=300)
 
-    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
+    x-img(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
 
 ::: column.grow
 
@@ -1049,7 +1070,7 @@ the highest “folding ratio” in the animal kingdom:
 
 ::: column(width=300)
 
-    x-media(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-img(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
 
 ::: column(width=300)
 

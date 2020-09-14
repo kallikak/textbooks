@@ -61,7 +61,7 @@ ones](target:short) on either side.
 
 {.r} Now it is easy to see that it is impossible to link up the ends of the
 shorter rods, if their combined length is less than the length of the larger rod.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ::: column(width=300)
 
@@ -128,8 +128,8 @@ Once again, we can think about this using physical objects: two sides of the
 triangle are metal rods of length 4 and 6, and the third side is a rubber band
 that can expand or contract.
 
-Now you can see that the rubber band will always be _{span.hover-target} longer
-than_ `6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
+Now you can see that the rubber band will always be [shorter than](action:hover(50,127,250,127,0))
+`6+4=10` and [longer than](action:hover(90,45,125,65,1)) `6-4=2`.
 
 ::: column(width=300)
 

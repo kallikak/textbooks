@@ -271,7 +271,7 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 [[Tangens|Sinus|Kosinus]]funktion verwenden:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("Gegenkathete", "apothem") / target("Ankathete", "half-base") =
+pill("Gegenkathete", "yellow", "apothem") / pill("Ankathete", "green", "half-base") =
 blank("Apothema", "s", "s/2") / blank("s/2", "s", "Apothema")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("Apothema", "yellow",
@@ -446,7 +446,7 @@ Regel nur den spezifischsten Typ.
     x-geopad.sticky(width=300 height=300): svg
 
 ::: column.grow
-Wähle nun vier Punkte, irgendwo im grauen Feld links.
+Wähle nun vier Punkte, irgendwo im grauen Feld.
 _{span.reveal(when="points")} Wir können sie alle zu einem Viereck verbinden._
 
 {.reveal(when="points" delay=1000)} Wir wollen jetzt den Mittelpunkt jeder der vier
@@ -581,7 +581,6 @@ Winkeln](target:angles) kongruent. _{span.qed}_
 Paare von gegenüberliegenden Seiten (oder Winkeln) in einem Viereck deckungsgleich sind, dann muss das
 Viereck ein Parallelogramm sein.
 
-    //- Angrenzende Winkel sind ergänzend.
 
 ::: tab
 #### Diagonalen _{span.check(when="diagonal blank-2 blank-3")}_
@@ -654,7 +653,7 @@ das Deltoid jedoch das einzige, das auch [konkav](gloss:concave) sein kann: wenn
 geformt ist:
 ::: column(width=320)
 
-    x-media(src="images/kites.jpg")
+    x-img(src="images/kites.jpg")
 
 :::
 
@@ -782,7 +781,7 @@ wir das auch für einige Vierecke tun können:
       path.blue(x="polygon(a1,b1,c1,d1)")
 
 ::: column.grow
-Versuche auf der linken Seite, ein Rechteck zu zeichnen, das die gleiche Fläche wie das
+Versuche entlang der Kästchen, ein Rechteck zu zeichnen, das die gleiche Fläche wie das
 Parallelogramm hat.
 
 {.reveal(when="draw-1")} Kannst du sehen, dass das [fehlende Dreieck](target:triangle-1)
@@ -792,7 +791,7 @@ _{span.reveal(when="blank-1")}Daher ist die Fläche eines Parallelogramms_
 
 {.text-center.reveal(when="blank-1")} Fläche = __{.i.m-green}Grundseite__ × __{.i.m-yellow}Höhe__
 
-{.reveal(when="blank-1" delay=1000)} _Seie vorsichtig bei der Messung der Höhe eines
+{.reveal(when="blank-1" delay=1000)} _Sei vorsichtig bei der Messung der Höhe eines
 Parallelogramms: Es ist in der Regel nicht gleich lang wie eine der beiden Seiten._
 :::
 
@@ -821,7 +820,7 @@ Diese parallelen Seiten werden als __Grundseiten__ des Trapezes bezeichnet.
       circle.reveal(when="blank-3" x="line(b2,c2).midpoint" target="t-width" animation="pop")
 
 ::: column.grow
-Versuche wie zuvor auf der linken Seite, ein Rechteck zu zeichnen, das die gleiche Fläche wie das Trapez hat.
+Versuche wie zuvor, ein Rechteck zu zeichnen, das die gleiche Fläche wie das Trapez hat.
 _{span.reveal(when="draw-2")} Kannst du sehen, wie sich die [fehlenden und hinzugefügten
 Dreiecke](target:triangles-3) links und rechts aufheben?_
 
@@ -875,7 +874,7 @@ und der Höhe [_h_](target:t-height):
       path.fill.yellow.transparent(x="polygon(d3,a3,point(1,9))" target="outside")
 
 ::: column.grow
-Bei diesem Deltoid](target:diag3) bilden die [beiden Diagonalen die Breite und Höhe
+Bei diesem [Deltoid](target:diag3) bilden die beiden Diagonalen die Breite und Höhe
 eines großen [Rechtecks](target:rect4), das das Deltoid umgibt.
 
 Die Fläche dieses Rechtecks ist [[doppelt so|gleich|dreimal so]] groß wie die Fläche des
@@ -937,25 +936,7 @@ wählen, die am besten geeignet ist._
 
 :::
 
-    //- ### Zyklische Vierecke
 
-    //- ### Gleichschenklige Trapeze
-    //- 
-    //- Ein gleichschenkliges Trapez ist ein Trapez, bei dem die nicht-parallelen Seiten
-    //- deckungsgleich sind. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -971,32 +952,32 @@ ohne Lücken oder Überlappungen zusammenfügen kann. Solche Muster werden als
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
 {.caption} [[Sechseckige|Dreieckige|Quadratische]] Wabe
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
 
 {.caption} Haut einer Sinaloa-Dreiecksnatter
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
 
 {.caption} Zellstruktur von Blättern
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
+    x-img(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
 
 {.caption} Basaltsäulen am Giant's Causeway in Nordirland
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
 
 {.caption} Ananasschale
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
 
 {.caption} Schildpatt einer Schildkröte
 :::
@@ -1009,40 +990,36 @@ Technik kopiert - vom alten Rom bis in die Gegenwart. Hier sind einige Beispiele
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
+    x-img(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
 
 {.caption} [[Rechteckiges|Quadratisches|Sechseckiges]] Belagsmuster
 ::: column(width=200)
 
-    x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
+    x-img(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
 
 {.caption} Gewächshaus am Eden Project in England
 ::: column(width=200)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
 
 {.caption} Mosaik in der Alhambra
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
+    x-img(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
 
 {.caption} [[Dreieckiges|Sechseckiges|Rechteckiges]] Dach im British Museum in London
 ::: column(width=200)
 
-    x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
+    x-img(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
 
 {.caption} Cellular Tessellation Pavillon in Sydney
 ::: column(width=200)
 
-    x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
+    x-img(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
 
 {.caption} _Studie einer regelmäßigen Flächenfüllung mit Reptilien_, M. C. Escher
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
 
 ---
 > id: tessellation-drawing
@@ -1053,11 +1030,18 @@ neue Formen aus der Seitenleiste auf die Leinwand. Welche Formen eignen sich gut
 es Formen, die sich nicht kacheln lassen? Versuche, interessante
 Muster zu erstellen!
 
-    include ./components/tessellation
-    figure: x-tessellation
-    x-gesture(target="x-tessellation .menu" slide="-300, 140")
+    figure: .tessellation
+      x-polypad
+      .menu
+        for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
+          .add(data-shape=s)
+      .btn-row
+        button.btn Clear
+        button.btn Download
+      svg.overlay: g.tiles.active
+    x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
-      h4 Beispiele für die Parkettierungen      anderer Studenten
+      h4 Beispiele für die Parkettierungen anderer Studenten
       .row.padded-thin
         div(style="width: 224px"): img(src="images/user/tess-1.png" width=240 height=160)
         div(style="width: 224px"): img(src="images/user/tess-2.png" width=240 height=160)
@@ -1098,7 +1082,6 @@ es entweder eine Lücke oder eine Überlappung.
 {.caption} Fünfecke [[kann man|kann man nicht]] zu einer Parkettierung zusammenfügen, _{span.reveal(when="blank-2")} da sich
 Vielfache von 108° nicht zu 360° summieren._
 
-    //- {.caption}3 × 108° = 324° ist zu klein, aber 4 × 108° = 432° ist zu groß.
 ::: column(width=160)
     include svg/tessellations/hexagons.svg
 
@@ -1307,22 +1290,22 @@ Werk enthält seltsame, mutierende Kreaturen, Muster und Landschaften:
 
     .row
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
         p.caption "Himmel und Wasser I" (1938)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
         p.caption "Eidechse" (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
         p.caption "Eidechsen, Fische, Fledermäuse" (1952)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
         p.caption "Schmetterlinge" (1948)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
         p.caption “Zwei Fische” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption "Muscheln und Seesterne" (1941)
 
 Diese Kunstwerke sehen oft spaßig und mühelos aus, aber die zugrunde liegenden mathematischen
@@ -1455,9 +1438,6 @@ regelmäßige Vielecke von derselben Art und an jeder
  bezeichnet, benannt nach dem griechischen
 Philosophen [Platon](bio:plato).
 
-    //- Die Pyramide rechts von keinem platonischen Körper. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 Wie sehen also die platonischen Körper aus - und wie viele von ihnen gibt es? Um eine dreidimensionale Form zu
 erhalten, benötigen wir mindestens [[3]] Flächen, die sich an jeder
@@ -1802,9 +1782,6 @@ von Syrakus](bio:archimedes), benannt, und es gibt 13 von ihnen:
 92 Flächen, 60 Eckpunkte, 150 Kanten
 :::
 
-    // Prismen und Antiprismen, deren Symmetriegruppen die Diedergruppen sind, werden im
-    // Allgemeinen nicht als archimedische Körper betrachtet, obwohl sie die
-    // obige Definition erfüllen.
 
 ---
 > id: polyhedra-applications
@@ -1817,12 +1794,12 @@ Stelle in der Natur zum Vorschein kommen - und wir können diese Eigenschaften i
 
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
+    x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Skelett eines Strahlentierchens
     
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/virus.jpg")
+    x-img(lightbox width=180 height=180 src="images/virus.jpg")
     p.caption Ikosaedrisches Virus
 
 ::: column.grow
@@ -1835,12 +1812,12 @@ Elementen besteht, aber fast wie eine Kugel geformt ist.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
+    x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Fulleren-Moleküle
       
 ::: column(width=180)
 
-    x-media(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
+    x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Biosphère Montreal
       
 ::: column.grow
@@ -1855,12 +1832,12 @@ Fuller](bio:fuller), der für den Bau ähnlich aussehender Gebäude bekannt ist.
 
 ::: column(width=180)
 
-    x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
+    x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Fluorit-Oktaeder
       
 ::: column(width=180)
 
-    x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
+    x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Pyritwürfel
       
 ::: column.grow
@@ -1871,12 +1848,12 @@ Wenn sie abbrechen oder zerspringen, kannst du diese Formen in größerem Maßst
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
     p.caption Achteckige Gitterrahmen
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/louvre.jpg")
+    x-img(lightbox width="180", height="180", src="images/louvre.jpg")
     p.caption Louvre-Museum in Paris
 
 ::: column.grow
@@ -1887,12 +1864,12 @@ tragen können.
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/football.jpg")
+    x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Fußball
     
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/dice.jpg")
+    x-img(lightbox width="180", height="180", src="images/dice.jpg")
     p.caption Mehrseitige Würfel
 
 ::: column.grow
